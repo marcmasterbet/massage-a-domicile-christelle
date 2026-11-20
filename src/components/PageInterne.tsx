@@ -12,7 +12,7 @@ type Props = {
 /** Gabarit des pages internes : en-tête clair sans photo, grand titre, puis le contenu. */
 export function PageInterne({ titre, children, fond }: Props) {
   return (
-    <div className={fond ? styles[fond] : undefined}>
+    <div className={`${styles.page} ${fond ? styles[fond] : ""}`}>
       <div className={styles.intro}>
         <h1 className={styles.title}>{titre}</h1>
       </div>

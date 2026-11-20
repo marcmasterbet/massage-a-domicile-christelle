@@ -38,6 +38,7 @@ export default function Servix() {
           cta={{ label: p.cta }}
           photo={{ alt: p.titre, src: p.photo }}
           fond={i % 2 === 1 ? "sauge" : "ivoire"}
+          suivant={i === SERVICES.length - 1 ? "terracotta" : i % 2 === 1 ? "ivoire" : "sauge"}
           inverse={i % 2 === 1}
         >
           {p.faq && <Faq items={p.faq} />}

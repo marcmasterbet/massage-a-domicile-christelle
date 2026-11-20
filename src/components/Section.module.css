@@ -1,15 +1,22 @@
+/* Fond : couleur du bloc, qui se fond dans celle du bloc suivant (--suivant) */
 .section {
   position: relative;
+  background: linear-gradient(
+    180deg,
+    var(--couleur) 0%,
+    var(--couleur) calc(100% - 180px),
+    var(--suivant, var(--couleur)) 100%
+  );
 }
 
 .ivoire {
-  background: var(--ivoire);
+  --couleur: var(--ivoire);
 }
 .sauge {
-  background: var(--sauge);
+  --couleur: var(--sauge);
 }
 .sable {
-  background: var(--sable);
+  --couleur: var(--sable);
 }
 
 .inner {

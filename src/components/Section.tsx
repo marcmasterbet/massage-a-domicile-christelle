@@ -13,6 +13,8 @@ type Props = {
   cta?: { label: string; href?: string };
   photo: { alt: string; src?: string; rond?: boolean; legende?: string[] };
   fond?: "ivoire" | "sauge" | "sable";
+  /** Couleur du bloc suivant : le bas du bloc s'y fond progressivement */
+  suivant?: "ivoire" | "sauge" | "sable" | "terracotta";
   /** Photo à gauche, texte à droite */
   inverse?: boolean;
   /** Contenu ajouté sous le texte (ex. FAQ) */
@@ -20,9 +22,21 @@ type Props = {
 };
 
 /** Une partie de page : une photo et un texte, rien de plus. */
-export function Section({ id, titre, titreAccent, paragraphes, cta, photo, fond = "ivoire", inverse, children }: Props) {
+export function Section({
+  id,
+  titre,
+  titreAccent,
+  paragraphes,
+  cta,
+  photo,
+  fond = "ivoire",
+  suivant,
+  inverse,
+  children,
+}: Props) {
+  const style = suivant ? ({ "--suivant": `var(--${suivant})` } as React.CSSProperties) : undefined;
   return (
-    <section id={id} className={`${styles.section} ${styles[fond]}`}>
+    <section id={id} className={`${styles.section} ${styles[fond]}`} style={style}>
       <div className={`${styles.inner} ${inverse ? styles.inverse : ""}`}>
         <div className={styles.text}>
           {titre && (

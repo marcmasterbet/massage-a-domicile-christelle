@@ -32,6 +32,12 @@
   }
 }
 
+/* Fond de page qui se fond dans le terracotta du pied de page */
+.page {
+  --couleur: var(--ivoire);
+  background: linear-gradient(180deg, var(--couleur) 0%, var(--couleur) calc(100% - 180px), var(--terracotta) 100%);
+}
+
 .sauge {
-  background: var(--sauge);
+  --couleur: var(--sauge);
 }

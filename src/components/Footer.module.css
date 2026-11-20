@@ -1,6 +1,7 @@
 .footer {
   background: var(--terracotta);
   color: var(--encre);
+  border: 0;
   font-size: 15px;
   line-height: 1.5;
 }

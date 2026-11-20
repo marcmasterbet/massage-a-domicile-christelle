@@ -22,7 +22,12 @@ export default function Accueil() {
       </Hero>
 
       {parties.map((partie, i) => (
-        <Section key={partie.titre} {...partie} inverse={i % 2 === 1} />
+        <Section
+          key={partie.titre}
+          {...partie}
+          suivant={parties[i + 1]?.fond ?? "terracotta"}
+          inverse={i % 2 === 1}
+        />
       ))}
     </>
   );

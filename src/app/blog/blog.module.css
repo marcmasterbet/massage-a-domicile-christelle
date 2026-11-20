@@ -58,7 +58,8 @@
 
 /* ——— Article ——— */
 .article {
-  padding: 150px var(--marge) clamp(56px, 7vw, 96px);
+  padding: 150px var(--marge) clamp(120px, 12vw, 180px);
+  background: linear-gradient(180deg, var(--ivoire) 0%, var(--ivoire) calc(100% - 180px), var(--terracotta) 100%);
 }
 
 .articleHeader,
