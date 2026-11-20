@@ -81,12 +81,6 @@ a:hover {
   }
 }
 
-@media (max-width: 600px) {
-  body {
-    padding-bottom: calc(56px + env(safe-area-inset-bottom)); /* barre d'appel fixe */
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

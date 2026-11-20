@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import { BackToTop } from "@/components/BackToTop";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { MobileCallBar } from "@/components/MobileCallBar";
 import {
   BRAND,
   PHONE_TEL,
@@ -80,7 +79,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main>{children}</main>
         <Footer />
-        <MobileCallBar />
         <BackToTop />
       </body>
     </html>

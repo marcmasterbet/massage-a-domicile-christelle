@@ -9,7 +9,6 @@
 
 .inner {
   padding: 16px clamp(16px, 2.5vw, 40px) 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -152,7 +151,6 @@
 @media (max-width: 900px) {
   .inner {
     padding: 14px 16px;
-    border-bottom: 0;
   }
 }
 
@@ -171,10 +169,6 @@
 /* Pages sans photo en haut : menu foncé sur fond ivoire */
 .header[data-theme="clair"] {
   color: var(--encre);
-}
-
-.header[data-theme="clair"] .inner {
-  border-bottom-color: transparent;
 }
 
 .header[data-theme="clair"] .logo {

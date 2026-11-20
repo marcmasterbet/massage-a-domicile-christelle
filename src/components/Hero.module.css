@@ -92,3 +92,13 @@
     padding: 104px 20px 40px;
   }
 }
+
+/* Téléphone : moins de marge autour du texte, photo moins agrandie */
+@media (max-width: 600px) {
+  .content {
+    padding: 88px 18px 26px;
+  }
+  .zoom {
+    object-position: 50% 45%;
+  }
+}

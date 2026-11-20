@@ -97,39 +97,47 @@
   }
 }
 
-/* Téléphone */
+/* Téléphone : haut de page compact */
 @media (max-width: 600px) {
   .surtitre {
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
   }
   .titre {
-    font-size: 32px;
-    line-height: 1.08;
+    font-size: 27px;
+    line-height: 1.1;
   }
   .accroche {
-    margin-top: 14px;
-    font-size: 18px;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.35;
   }
   .texte {
-    margin-top: 8px;
-    font-size: 15px;
-    line-height: 1.5;
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.45;
   }
   .ctaWrap {
-    margin-top: 20px;
+    margin-top: 16px;
   }
   .cta {
-    width: 104px;
-    height: 104px;
-    padding: 12px;
-    font-size: 15px;
+    width: 92px;
+    height: 92px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .ctaVerso {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .ctaVerso [data-numero] {
+    font-size: 13px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   .titre {
-    font-size: 28px;
+    font-size: 25px;
   }
 }
