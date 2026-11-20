@@ -2,7 +2,7 @@
 .list {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 40px var(--marge) clamp(56px, 7vw, 96px);
+  padding: 28px var(--marge) clamp(56px, 7vw, 96px);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
@@ -58,7 +58,7 @@
 
 /* ——— Article ——— */
 .article {
-  padding: 164px var(--marge) clamp(120px, 12vw, 180px);
+  padding: 124px var(--marge) clamp(120px, 12vw, 180px);
   background: linear-gradient(180deg, var(--ivoire) 0%, var(--ivoire) calc(100% - 180px), var(--terracotta) 100%);
 }
 
@@ -149,7 +149,7 @@
 
 @media (max-width: 900px) {
   .article {
-    padding-top: 122px;
+    padding-top: 104px;
   }
   .body {
     font-size: 17px;

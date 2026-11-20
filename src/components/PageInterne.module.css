@@ -1,7 +1,7 @@
 .intro {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 180px var(--marge) 8px;
+  padding: 124px var(--marge) 0;
 }
 
 .title {
@@ -17,12 +17,12 @@
 
 /* La première partie colle au titre */
 .intro + section > div {
-  padding-top: clamp(40px, 5vw, 64px);
+  padding-top: 28px;
 }
 
 @media (max-width: 900px) {
   .intro {
-    padding-top: 124px;
+    padding-top: 104px;
   }
 }
 

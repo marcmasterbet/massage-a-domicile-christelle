@@ -1,0 +1,42 @@
+.button {
+  position: fixed;
+  right: clamp(16px, 2.5vw, 32px);
+  bottom: clamp(16px, 2.5vw, 32px);
+  z-index: 45;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(137, 48, 65, 0.25);
+  background: var(--ivoire);
+  color: var(--framboise);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(43, 39, 35, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s, background 0.2s ease, color 0.2s ease;
+}
+
+.button[data-visible="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.button:hover {
+  background: var(--framboise);
+  color: #fff;
+}
+
+/* Sur téléphone : au-dessus de la barre « Appeler » */
+@media (max-width: 900px) {
+  .button {
+    width: 44px;
+    height: 44px;
+    right: 14px;
+    bottom: calc(56px + env(safe-area-inset-bottom) + 14px);
+  }
+}

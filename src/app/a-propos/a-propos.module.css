@@ -1,7 +1,7 @@
 .page {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 48px var(--marge) clamp(64px, 8vw, 112px);
+  padding: 28px var(--marge) clamp(64px, 8vw, 112px);
   display: grid;
   grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
   gap: 48px 80px;
