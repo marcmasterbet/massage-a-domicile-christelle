@@ -72,7 +72,16 @@
   border-color: var(--ivoire);
   color: var(--framboise);
   font-size: 15px;
-  padding: 16px;
+  line-height: 1.3;
+  padding: 14px;
+}
+
+/* Dans le rond : « Appelle-moi au » puis le numéro sur sa propre ligne */
+.ctaVerso [data-numero] {
+  display: block;
+  margin-top: 2px;
+  font-style: normal;
+  font-size: 16px;
 }
 
 @media (max-width: 900px) {

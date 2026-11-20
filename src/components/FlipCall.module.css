@@ -30,6 +30,11 @@
   transform: rotateY(180deg);
 }
 
+/* Un seul bloc de texte par face : il passe à la ligne normalement */
+.texte {
+  display: block;
+}
+
 .nowrap {
   white-space: nowrap;
 }

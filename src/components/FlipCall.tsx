@@ -38,7 +38,10 @@ export function FlipCall({ children, verso, faceClassName = "", rectoClassName =
   const [flipped, setFlipped] = useState(false);
   const versoContent = verso ?? (
     <>
-      Appelle-moi au <span className={styles.nowrap}>{PHONE_DISPLAY}</span>
+      Appelle-moi au{" "}
+      <span className={styles.nowrap} data-numero="">
+        {PHONE_DISPLAY}
+      </span>
     </>
   );
 
@@ -63,7 +66,7 @@ export function FlipCall({ children, verso, faceClassName = "", rectoClassName =
       <span className={styles.inner}>
         <span className={`${styles.face} ${faceClassName} ${rectoClassName}`}>{children}</span>
         <span className={`${styles.face} ${styles.verso} ${faceClassName} ${versoClassName}`} aria-hidden="true">
-          {versoContent}
+          <span className={styles.texte}>{versoContent}</span>
         </span>
       </span>
     </a>
