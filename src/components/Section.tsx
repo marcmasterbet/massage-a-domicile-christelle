@@ -3,13 +3,15 @@ import Link from "next/link";
 import { FlipCall } from "./FlipCall";
 import styles from "./Section.module.css";
 
+export type Paragraphe = string | { texte: string; style: "fort" | "citation" | "signature" };
+
 type Props = {
   id?: string;
-  titre: string;
+  titre?: string;
   titreAccent?: string;
-  paragraphes: string[];
+  paragraphes: Paragraphe[];
   cta?: { label: string; href?: string };
-  photo: { alt: string; src?: string };
+  photo: { alt: string; src?: string; rond?: boolean };
   fond?: "ivoire" | "sauge" | "sable";
   /** Photo à gauche, texte à droite */
   inverse?: boolean;
@@ -21,14 +23,20 @@ export function Section({ id, titre, titreAccent, paragraphes, cta, photo, fond 
     <section id={id} className={`${styles.section} ${styles[fond]}`}>
       <div className={`${styles.inner} ${inverse ? styles.inverse : ""}`}>
         <div className={styles.text}>
-          <h2 className={styles.title}>
-            {titre} {titreAccent && <em>{titreAccent}</em>}
-          </h2>
-          {paragraphes.map((p) => (
-            <p key={p} className={styles.paragraph}>
-              {p}
-            </p>
-          ))}
+          {titre && (
+            <h2 className={styles.title}>
+              {titre} {titreAccent && <em>{titreAccent}</em>}
+            </h2>
+          )}
+          {paragraphes.map((p) => {
+            const texte = typeof p === "string" ? p : p.texte;
+            const style = typeof p === "string" ? "" : styles[p.style];
+            return (
+              <p key={texte} className={`${styles.paragraph} ${style}`}>
+                {texte}
+              </p>
+            );
+          })}
           {cta &&
             (cta.href ? (
               <Link href={cta.href} className={`${styles.ctaWrap} ${styles.cta} ${styles.ctaRecto}`}>
@@ -46,7 +54,7 @@ export function Section({ id, titre, titreAccent, paragraphes, cta, photo, fond 
             ))}
         </div>
 
-        <div className={styles.photo}>
+        <div className={`${styles.photo} ${photo.rond ? styles.rond : ""}`}>
           {photo.src ? (
             <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 900px) 100vw, 420px" />
           ) : (

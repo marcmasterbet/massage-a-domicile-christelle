@@ -33,7 +33,7 @@ export function Footer() {
           </FlipCall>
         </div>
 
-        <nav className={styles.col} aria-label="Les massages">
+        <nav id="les-massages" className={styles.col} aria-label="Les massages">
           <p className={styles.heading}>Les massages</p>
           {PRESTATIONS.map((p) => (
             <Link key={p.slug} href={`/${p.slug}`}>
