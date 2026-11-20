@@ -9,6 +9,8 @@ export const PHONE_TEL = "tel:+33777258593";
 export const INSTAGRAM_URL = "https://www.instagram.com/l.ame.agit.o.corps/";
 export const FACEBOOK_URL = "https://www.facebook.com/omdanges";
 
+export const HORAIRES = "Je prends soin de toi 7 jours sur 7, de 9 h à 22 h.";
+
 export const VILLES = ["Bayonne", "Anglet", "Biarritz", "Saint-Pierre-d’Irube", "Tarnos"];
 
 export type Prestation = {

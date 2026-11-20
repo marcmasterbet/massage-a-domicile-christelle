@@ -60,6 +60,12 @@ const jsonLd = {
   image: `${SITE_URL}/images/massage-mains.jpg`,
   logo: `${SITE_URL}/images/logo-lame-agit-o-corps.png`,
   founder: { "@type": "Person", name: PRATICIENNE },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    opens: "09:00",
+    closes: "22:00",
+  },
   areaServed: VILLES.map((v) => ({ "@type": "City", name: v })),
   sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
 };
