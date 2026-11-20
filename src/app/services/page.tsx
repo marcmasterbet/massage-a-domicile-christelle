@@ -24,7 +24,7 @@ const faqJsonLd = {
 
 export default function Services() {
   return (
-    <PageInterne titre="Services">
+    <PageInterne titre="Services" titreMasque>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}

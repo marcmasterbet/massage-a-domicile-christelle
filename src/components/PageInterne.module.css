@@ -15,12 +15,24 @@
   color: var(--encre);
 }
 
+/* Sans titre visible : on laisse juste la place du menu */
+.introMasque {
+  height: 96px;
+}
+
+.introMasque + section > div {
+  padding-top: 24px;
+}
+
 /* La première partie colle au titre */
 .intro + section > div {
   padding-top: 28px;
 }
 
 @media (max-width: 900px) {
+  .introMasque {
+    height: 76px;
+  }
   .intro {
     padding-top: 104px;
   }
