@@ -27,7 +27,7 @@ export function Header() {
   }, [menuOpen]);
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-theme={pathname === "/" ? "photo" : "clair"}>
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label={`${BRAND} – accueil`}>
           <Image

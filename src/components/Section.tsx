@@ -31,11 +31,16 @@ export function Section({ id, titre, titreAccent, paragraphes, cta, photo, fond 
           ))}
           {cta &&
             (cta.href ? (
-              <Link href={cta.href} className={`${styles.ctaWrap} ${styles.cta}`}>
+              <Link href={cta.href} className={`${styles.ctaWrap} ${styles.cta} ${styles.ctaRecto}`}>
                 {cta.label}
               </Link>
             ) : (
-              <FlipCall className={styles.ctaWrap} faceClassName={styles.cta} versoClassName={styles.ctaVerso}>
+              <FlipCall
+                className={styles.ctaWrap}
+                faceClassName={styles.cta}
+                rectoClassName={styles.ctaRecto}
+                versoClassName={styles.ctaVerso}
+              >
                 {cta.label}
               </FlipCall>
             ))}

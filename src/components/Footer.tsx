@@ -13,11 +13,11 @@ export function Footer() {
             alt={`${BRAND} – Massage intuitif et bien-être`}
             width={1200}
             height={382}
-            sizes="240px"
+            sizes="140px"
           />
         </Link>
 
-        <nav aria-label="Pied de page" className={styles.col}>
+        <nav aria-label="Pied de page" className={styles.nav}>
           {NAVIGATION.map((item) => (
             <Link key={item.href} href={item.href}>
               {item.label}
@@ -25,7 +25,7 @@ export function Footer() {
           ))}
         </nav>
 
-        <div className={styles.col}>
+        <div className={styles.contact}>
           <a href={PHONE_TEL} className={styles.phone}>
             {PHONE_DISPLAY}
           </a>

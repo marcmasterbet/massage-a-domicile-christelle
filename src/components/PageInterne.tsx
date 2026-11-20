@@ -1,4 +1,3 @@
-import { Hero } from "./Hero";
 import { Section } from "./Section";
 import styles from "./PageInterne.module.css";
 
@@ -8,13 +7,13 @@ type Props = {
   children?: React.ReactNode;
 };
 
-/** Gabarit des pages internes : bandeau photo + titre, puis le contenu. */
+/** Gabarit des pages internes : en-tête clair sans photo, grand titre, puis le contenu. */
 export function PageInterne({ titre, children }: Props) {
   return (
     <>
-      <Hero variante="page">
+      <div className={styles.intro}>
         <h1 className={styles.title}>{titre}</h1>
-      </Hero>
+      </div>
       {children ?? (
         <Section
           titre="[Titre de Jeff]"

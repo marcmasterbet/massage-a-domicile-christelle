@@ -1,15 +1,33 @@
+.intro {
+  max-width: var(--contenu-max);
+  margin: 0 auto;
+  padding: 168px var(--marge) 8px;
+}
+
 .title {
   margin: 0;
   max-width: 900px;
   font-family: var(--font-titre), Georgia, serif;
   font-weight: 300;
-  font-size: clamp(36px, 4.4vw, 64px);
-  line-height: 1.06;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.04;
   letter-spacing: -0.02em;
+  color: var(--encre);
+}
+
+/* La première partie colle au titre */
+.intro + section > div {
+  padding-top: clamp(40px, 5vw, 64px);
+}
+
+@media (max-width: 900px) {
+  .intro {
+    padding-top: 112px;
+  }
 }
 
 @media (max-width: 480px) {
   .title {
-    font-size: 34px;
+    font-size: 36px;
   }
 }
