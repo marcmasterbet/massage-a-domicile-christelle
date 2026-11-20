@@ -1,5 +1,5 @@
 L'AME AGIT Ô CORPS – massages-pays-basque.fr
-Version 5 : page d'accueil (20/11/2026)
+Version 6 : page d'accueil (20/11/2026)
 
 CONTENU
 - index.html : la page d'accueil, autonome (aucun CMS, aucune base de données)
