@@ -1,10 +1,10 @@
 .page {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 28px var(--marge) clamp(64px, 8vw, 112px);
+  padding: 20px var(--marge) clamp(48px, 6vw, 80px);
   display: grid;
   grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
-  gap: 48px 80px;
+  gap: 36px 64px;
   align-items: start;
 }
 
@@ -49,13 +49,13 @@
 }
 
 .partie + .partie {
-  margin-top: 64px;
-  padding-top: 56px;
+  margin-top: 40px;
+  padding-top: 36px;
   border-top: 1px solid var(--sable);
 }
 
 .titre {
-  margin: 0 0 24px;
+  margin: 0 0 18px;
   font-family: var(--font-titre), Georgia, serif;
   font-weight: 350;
   font-size: clamp(30px, 3.2vw, 44px);

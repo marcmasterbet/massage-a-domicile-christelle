@@ -1,7 +1,7 @@
 .intro {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 124px var(--marge) 0;
+  padding: 112px var(--marge) 0;
 }
 
 .title {
@@ -17,16 +17,16 @@
 
 /* Sans titre visible : on laisse juste la place du menu */
 .introMasque {
-  height: 96px;
+  height: 92px;
 }
 
 .introMasque + section > div {
-  padding-top: 24px;
+  padding-top: 16px;
 }
 
 /* La première partie colle au titre */
 .intro + section > div {
-  padding-top: 28px;
+  padding-top: 20px;
 }
 
 @media (max-width: 900px) {

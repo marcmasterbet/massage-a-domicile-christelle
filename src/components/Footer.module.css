@@ -9,10 +9,10 @@
 .inner {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 64px var(--marge) 48px;
+  padding: 44px var(--marge) 32px;
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr) minmax(0, 0.8fr) minmax(0, 0.9fr);
-  gap: 40px 48px;
+  gap: 32px 48px;
 }
 
 /* Colonne marque */
@@ -115,7 +115,7 @@
 .bottom {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 18px var(--marge) 22px;
+  padding: 14px var(--marge) 18px;
   border-top: 1px solid rgba(43, 39, 35, 0.18);
   display: flex;
   flex-wrap: wrap;

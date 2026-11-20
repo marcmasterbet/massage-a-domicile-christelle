@@ -1,5 +1,5 @@
 .faq {
-  margin-top: 36px;
+  margin-top: 28px;
   border-top: 1px solid rgba(43, 39, 35, 0.14);
 }
 
@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px 0;
+  padding: 14px 0;
   min-height: 44px;
   font-family: var(--font-titre), Georgia, serif;
   font-size: 19px;

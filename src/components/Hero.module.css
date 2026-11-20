@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 720px;
+  min-height: 640px;
   display: flex;
   flex-direction: column;
   background: #23291b;
@@ -65,7 +65,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 140px var(--marge) 56px;
+  padding: 120px var(--marge) 44px;
 }
 
 @media (max-width: 900px) {

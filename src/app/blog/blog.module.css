@@ -2,7 +2,7 @@
 .list {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 28px var(--marge) clamp(56px, 7vw, 96px);
+  padding: 20px var(--marge) clamp(48px, 6vw, 80px);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
@@ -58,7 +58,7 @@
 
 /* ——— Article ——— */
 .article {
-  padding: 124px var(--marge) clamp(120px, 12vw, 180px);
+  padding: 112px var(--marge) clamp(96px, 10vw, 140px);
   background: linear-gradient(180deg, var(--ivoire) 0%, var(--ivoire) calc(100% - 180px), var(--terracotta) 100%);
 }
 
@@ -93,13 +93,13 @@
 }
 
 .body {
-  margin-top: 40px;
+  margin-top: 28px;
   font-size: 19px;
   line-height: 1.75;
 }
 
 .body h2 {
-  margin: 52px 0 14px;
+  margin: 38px 0 12px;
   font-family: var(--font-titre), Georgia, serif;
   font-weight: 400;
   font-size: clamp(26px, 2.6vw, 32px);

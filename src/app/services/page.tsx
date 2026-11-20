@@ -25,10 +25,6 @@ const faqJsonLd = {
 export default function Services() {
   return (
     <PageInterne titre="Services" titreMasque>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
-      />
       {SERVICES.map((p, i) => (
         <Section
           key={p.slug}
@@ -44,6 +40,10 @@ export default function Services() {
           {p.faq && <Faq items={p.faq} />}
         </Section>
       ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
+      />
     </PageInterne>
   );
 }
