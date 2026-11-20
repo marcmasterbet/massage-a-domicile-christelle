@@ -1,0 +1,21 @@
+.legal {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: clamp(56px, 8vw, 96px) var(--marge);
+}
+
+.legal h2 {
+  margin: 44px 0 10px;
+  font-family: var(--font-titre), Georgia, serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.legal h2:first-child {
+  margin-top: 0;
+}
+
+.legal p {
+  margin: 10px 0 0;
+}

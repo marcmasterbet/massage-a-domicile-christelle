@@ -1,0 +1,41 @@
+.flip {
+  display: inline-block;
+  perspective: 900px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.inner {
+  display: grid;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+
+.flip[data-flipped="true"] .inner {
+  transform: rotateY(180deg);
+}
+
+/* Les deux faces occupent la même case : le bouton prend la taille de la plus grande */
+.face {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.verso {
+  transform: rotateY(180deg);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inner {
+    transition: none;
+  }
+}

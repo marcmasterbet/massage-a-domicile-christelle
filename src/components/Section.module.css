@@ -1,0 +1,126 @@
+.section {
+  position: relative;
+}
+
+.ivoire {
+  background: var(--ivoire);
+}
+.sauge {
+  background: var(--sauge);
+}
+.sable {
+  background: var(--sable);
+}
+
+.inner {
+  max-width: var(--contenu-max);
+  margin: 0 auto;
+  padding: clamp(72px, 9vw, 128px) var(--marge);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px 72px;
+}
+
+.inverse {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1 1 460px;
+  min-width: 0;
+  max-width: 640px;
+}
+
+.title {
+  margin: 0 0 30px;
+  font-family: var(--font-titre), Georgia, serif;
+  font-weight: 350;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.title em {
+  color: var(--framboise);
+}
+
+.paragraph {
+  margin: 22px 0 0;
+}
+
+.title + .paragraph {
+  margin-top: 0;
+}
+
+.ctaWrap {
+  display: inline-block;
+  margin-top: 36px;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--framboise);
+  color: #fff;
+  text-decoration: none;
+  padding: 17px 30px;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: background 0.2s ease;
+}
+
+a.cta:hover {
+  background: var(--framboise-fonce);
+  color: #fff;
+}
+
+.ctaVerso {
+  background: var(--olive);
+  color: #fff;
+}
+
+.photo {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 420px;
+  height: 480px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.photo img {
+  object-fit: cover;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  background: var(--sauge);
+  border: 1.5px solid #b5c4ac;
+  border-radius: 4px;
+}
+
+.sauge .placeholder,
+.sable .placeholder {
+  background: var(--ivoire);
+  border-color: #d9cab0;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    gap: 36px;
+  }
+  .inverse {
+    flex-direction: row;
+  }
+  .photo {
+    flex-basis: 100%;
+    max-width: none;
+    height: 360px;
+  }
+  .ctaWrap {
+    display: block;
+    text-align: center;
+  }
+}
