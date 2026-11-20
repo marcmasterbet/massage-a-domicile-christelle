@@ -36,7 +36,7 @@ export function Header() {
             width={1200}
             height={382}
             preload
-            sizes="140px"
+            sizes="200px"
           />
         </Link>
 

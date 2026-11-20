@@ -20,14 +20,14 @@
   display: block;
   flex: 0 0 auto;
   background: var(--ivoire);
-  padding: 5px 14px;
-  border-radius: 40px;
+  padding: 6px 18px;
+  border-radius: 50px;
   box-shadow: 0 6px 20px rgba(20, 22, 16, 0.25);
   line-height: 0;
 }
 
 .logo img {
-  height: 34px;
+  height: 50px;
   width: auto;
 }
 
@@ -156,9 +156,15 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
   .logo img {
-    height: 30px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo img {
+    height: 36px;
   }
 }
 

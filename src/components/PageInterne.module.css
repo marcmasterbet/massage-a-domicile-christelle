@@ -1,7 +1,7 @@
 .intro {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 168px var(--marge) 8px;
+  padding: 180px var(--marge) 8px;
 }
 
 .title {
@@ -22,7 +22,7 @@
 
 @media (max-width: 900px) {
   .intro {
-    padding-top: 112px;
+    padding-top: 124px;
   }
 }
 

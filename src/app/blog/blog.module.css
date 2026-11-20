@@ -58,7 +58,7 @@
 
 /* ——— Article ——— */
 .article {
-  padding: 150px var(--marge) clamp(120px, 12vw, 180px);
+  padding: 164px var(--marge) clamp(120px, 12vw, 180px);
   background: linear-gradient(180deg, var(--ivoire) 0%, var(--ivoire) calc(100% - 180px), var(--terracotta) 100%);
 }
 
@@ -149,7 +149,7 @@
 
 @media (max-width: 900px) {
   .article {
-    padding-top: 110px;
+    padding-top: 122px;
   }
   .body {
     font-size: 17px;

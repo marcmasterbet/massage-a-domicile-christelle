@@ -65,7 +65,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 124px var(--marge) 56px;
+  padding: 140px var(--marge) 56px;
 }
 
 @media (max-width: 900px) {
@@ -89,6 +89,6 @@
     min-height: 340px;
   }
   .content {
-    padding: 92px 20px 40px;
+    padding: 104px 20px 40px;
   }
 }
