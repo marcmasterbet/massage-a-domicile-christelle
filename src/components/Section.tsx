@@ -15,10 +15,12 @@ type Props = {
   fond?: "ivoire" | "sauge" | "sable";
   /** Photo à gauche, texte à droite */
   inverse?: boolean;
+  /** Contenu ajouté sous le texte (ex. FAQ) */
+  children?: React.ReactNode;
 };
 
 /** Une partie de page : une photo et un texte, rien de plus. */
-export function Section({ id, titre, titreAccent, paragraphes, cta, photo, fond = "ivoire", inverse }: Props) {
+export function Section({ id, titre, titreAccent, paragraphes, cta, photo, fond = "ivoire", inverse, children }: Props) {
   return (
     <section id={id} className={`${styles.section} ${styles[fond]}`}>
       <div className={`${styles.inner} ${inverse ? styles.inverse : ""}`}>
@@ -52,6 +54,7 @@ export function Section({ id, titre, titreAccent, paragraphes, cta, photo, fond 
                 {cta.label}
               </FlipCall>
             ))}
+          {children}
         </div>
 
         {photo.legende ? (

@@ -36,7 +36,7 @@ export function Footer() {
         <nav id="les-massages" className={styles.col} aria-label="Les massages">
           <p className={styles.heading}>Les massages</p>
           {PRESTATIONS.map((p) => (
-            <Link key={p.slug} href={`/${p.slug}/`}>
+            <Link key={p.slug} href={`/servix/#${p.slug}`}>
               {p.nom}
             </Link>
           ))}

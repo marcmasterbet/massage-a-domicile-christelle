@@ -26,7 +26,7 @@ export const parties: PartiePage[] = [
       "Que tu sois un homme ou une femme, tu peux venir comme tu es, sans avoir à te justifier.",
       "Avec moi, il y a de l'écoute, de la bienveillance, du partage, un peu d'humour et surtout aucun jugement.",
     ],
-    cta: { label: "Je découvre tes massages", href: "#les-massages" },
+    cta: { label: "Je découvre tes massages", href: "/servix/" },
     photo: {
       alt: "Portrait de Christelle",
       src: "/images/christelle-a-propos.jpg",
