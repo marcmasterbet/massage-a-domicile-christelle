@@ -223,15 +223,19 @@ a.cta:hover,
     flex-basis: 100%;
     max-width: none;
     height: auto;
-    aspect-ratio: 4 / 5;
-    max-height: 460px;
+    aspect-ratio: 1;
+    max-height: 380px;
   }
   /* Emplacement sans photo : masqué sur téléphone */
   .vide {
     display: none;
   }
   .title {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
+    font-size: 28px;
+  }
+  .paragraph {
+    margin-top: 16px;
   }
   .rond {
     flex-basis: auto;

@@ -1,9 +1,9 @@
 // Textes de Jeff — à reproduire mot pour mot. Ne rien ajouter.
 
 export const hero = {
-  surtitre: "Massage à domicile au Pays basque :",
+  surtitre: "Massage à domicile au Pays basque :",
   titre: "le corps tendu, la tête pleine,",
-  titreAccent: "besoin de souffler ?",
+  titreAccent: "besoin de souffler ?",
   accroche: "Ne bouge pas, j'arrive avec ma table de massage.",
   texte:
     "Je prends soin de toi à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos, avec des massages 100 % personnalisés.",
@@ -27,7 +27,7 @@ export const parties: PartieAccueil[] = [
     paragraphes: [
       "Entre le travail, les obligations du quotidien et les imprévus, tu trouves toujours une bonne raison de reporter le moment que tu voulais t'accorder.",
       "Tu aimerais soulager tes tensions, évacuer ton stress et prendre soin de toi.",
-      "Mais à quand remonte la dernière fois où tu l'as vraiment fait ?",
+      "Mais à quand remonte la dernière fois où tu l'as vraiment fait ?",
     ],
     cta: { label: "Je prends soin de moi" },
     photo: { alt: "Femme qui se masse l'épaule, tendue devant son ordinateur", src: "/images/dos-tendu.jpg" },
@@ -61,14 +61,14 @@ export const parties: PartieAccueil[] = [
   },
   {
     id: "reserver",
-    titre: "Ton massage à domicile : tu n'as rien à apporter,",
+    titre: "Ton massage à domicile : tu n'as rien à apporter,",
     titreAccent: "je m'occupe du matériel.",
     paragraphes: [
-      "Ma table de massage, mon linge, mes produits et surtout ma bonne humeur : j'apporte tout ce dont j'ai besoin.",
+      "Ma table de massage, mon linge, mes produits et surtout ma bonne humeur : j'apporte tout ce dont j'ai besoin.",
       "Tu m'as d'ailleurs peut-être déjà croisée à vélo dans les rues de Bayonne, Anglet ou Biarritz.",
-      "Mon vélo s'appelle Fernand !",
+      "Mon vélo s'appelle Fernand !",
       "Pour réserver, il suffit de me contacter. Nous échangeons sur tes besoins et convenons ensemble d'un rendez-vous.",
-      "Et le plus agréable dans tout ça ? Une fois ton massage terminé, tu es déjà chez toi.",
+      "Et le plus agréable dans tout ça ? Une fois ton massage terminé, tu es déjà chez toi.",
     ],
     cta: { label: "Je choisis mon créneau" },
     photo: { alt: "Christelle et son vélo Fernand sur les quais de Bayonne", src: "/images/christelle-fernand.jpg" },

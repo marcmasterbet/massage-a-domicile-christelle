@@ -79,10 +79,16 @@
     position: absolute;
     height: 100%;
   }
+  /* Sur téléphone : pas de zoom animé, cadrage centré sur les mains */
+  .zoom {
+    animation: none;
+    transform: none;
+    object-position: 58% 50%;
+  }
   .page {
     min-height: 340px;
   }
   .content {
-    padding: 104px 20px 48px;
+    padding: 92px 20px 40px;
   }
 }

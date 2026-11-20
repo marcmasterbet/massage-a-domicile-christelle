@@ -86,26 +86,37 @@
 }
 
 @media (max-width: 900px) {
+  .surtitre {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    margin-bottom: 12px;
+  }
   .titre {
-    font-size: 38px;
-    line-height: 1.06;
+    font-size: 32px;
+    line-height: 1.08;
+  }
+  .accroche {
+    margin-top: 14px;
+    font-size: 18px;
+  }
+  .texte {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.5;
   }
   .ctaWrap {
-    margin-top: 24px;
+    margin-top: 20px;
   }
   .cta {
-    width: 120px;
-    height: 120px;
-    font-size: 17px;
+    width: 104px;
+    height: 104px;
+    padding: 12px;
+    font-size: 15px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .titre {
-    font-size: 34px;
-  }
-  .surtitre {
-    font-size: 12px;
-    letter-spacing: 0.18em;
+    font-size: 28px;
   }
 }

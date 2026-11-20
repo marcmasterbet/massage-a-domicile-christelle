@@ -28,6 +28,6 @@ export const PRESTATIONS: Prestation[] = [
 export const NAVIGATION = [
   { label: "Accueil", href: "/" },
   { label: "À propos", href: "/a-propos/" },
-  { label: "Servix", href: "/servix/" },
+  { label: "Services", href: "/services/" },
   { label: "Blog", href: "/blog/" },
 ];

@@ -1,4 +1,4 @@
-import type { QuestionReponse } from "@/content/servix";
+import type { QuestionReponse } from "@/content/services";
 import styles from "./Faq.module.css";
 
 /** Questions fréquentes : seule la question est visible, la réponse se déroule au clic. */

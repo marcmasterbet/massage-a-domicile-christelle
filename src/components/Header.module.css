@@ -168,7 +168,7 @@
 }
 
 .header[data-theme="clair"] .inner {
-  border-bottom-color: var(--sable);
+  border-bottom-color: transparent;
 }
 
 .header[data-theme="clair"] .logo {
