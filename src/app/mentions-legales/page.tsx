@@ -30,10 +30,15 @@ export default function MentionsLegales() {
 
         <h2>Hébergement</h2>
         <p>
-          [Nom de l’hébergeur]
+          Vercel Inc.
           <br />
-          [Adresse de l’hébergeur]
+          440 N Barranca Ave #4133, Covina, CA 91723, États-Unis
+          <br />
+          vercel.com
         </p>
+
+        <h2>Conception et mise en ligne</h2>
+        <p>Marc Bretzner</p>
 
         <h2>Propriété intellectuelle</h2>
         <p>

@@ -52,6 +52,7 @@ export const parties: PartieAccueil[] = [
     paragraphes: [
       "Je suis Christelle, praticienne du bien-être. J'ai commencé à exercer en 2020.",
       "Je suis notamment certifiée en massage pré et postnatal et en soin liftant japonais du visage.",
+      "Je fais partie du réseau de praticiens ELSEE. Si tu bénéficies d'une offre ELSEE, ton massage peut être partiellement remboursé, selon les conditions de ton contrat.",
       "Que tu sois un homme ou une femme, je prends le temps de t'écouter avant de te masser.",
       "Pas de massage standardisé, pas de jugement. Mes mains s'adaptent à tes besoins du moment.",
     ],
