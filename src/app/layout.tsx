@@ -6,8 +6,6 @@ import { Header } from "@/components/Header";
 import { MobileCallBar } from "@/components/MobileCallBar";
 import {
   BRAND,
-  FACEBOOK_URL,
-  INSTAGRAM_URL,
   PHONE_TEL,
   PRATICIENNE,
   SITE_URL,
@@ -69,7 +67,6 @@ const jsonLd = {
     closes: "22:00",
   },
   areaServed: VILLES.map((v) => ({ "@type": "City", name: v })),
-  sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

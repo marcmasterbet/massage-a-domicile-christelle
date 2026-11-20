@@ -85,10 +85,23 @@
   font-size: 16px;
 }
 
+/* Tablette */
 @media (max-width: 900px) {
+  .titre {
+    font-size: 46px;
+  }
+  .cta {
+    width: 130px;
+    height: 130px;
+    font-size: 17px;
+  }
+}
+
+/* Téléphone */
+@media (max-width: 600px) {
   .surtitre {
-    font-size: 11px;
-    letter-spacing: 0.16em;
+    font-size: 12px;
+    letter-spacing: 0.14em;
     margin-bottom: 12px;
   }
   .titre {

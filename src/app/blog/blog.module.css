@@ -70,7 +70,8 @@
 
 .back {
   display: inline-block;
-  margin-bottom: 22px;
+  padding: 10px 0;
+  margin-bottom: 12px;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.04em;

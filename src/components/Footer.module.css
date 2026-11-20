@@ -142,6 +142,12 @@
   .inner {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .col {
+    gap: 2px;
+  }
+  .col a {
+    padding: 9px 0;
+  }
 }
 
 @media (max-width: 600px) {

@@ -2,9 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   BRAND,
-  FACEBOOK_URL,
   HORAIRES,
-  INSTAGRAM_URL,
   PHONE_DISPLAY,
   PHONE_TEL,
   PRATICIENNE,
@@ -53,12 +51,6 @@ export function Footer() {
           <p className={styles.heading}>Contact</p>
           <a href={PHONE_TEL} className={styles.phone}>
             {PHONE_DISPLAY}
-          </a>
-          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-            Instagram
-          </a>
-          <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
-            Facebook
           </a>
         </div>
       </div>

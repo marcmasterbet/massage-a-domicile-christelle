@@ -32,7 +32,7 @@
 }
 
 /* Sur téléphone : au-dessus de la barre « Appeler » */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .button {
     width: 44px;
     height: 44px;
