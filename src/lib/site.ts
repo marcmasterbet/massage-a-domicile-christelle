@@ -27,7 +27,7 @@ export const PRESTATIONS: Prestation[] = [
 
 export const NAVIGATION = [
   { label: "Accueil", href: "/" },
-  { label: "À propos", href: "/a-propos" },
-  ...PRESTATIONS.map((p) => ({ label: p.nom, href: `/${p.slug}` })),
-  { label: "Blog", href: "/blog" },
+  { label: "À propos", href: "/a-propos/" },
+  ...PRESTATIONS.map((p) => ({ label: p.nom, href: `/${p.slug}/` })),
+  { label: "Blog", href: "/blog/" },
 ];

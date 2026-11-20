@@ -8,7 +8,7 @@ export type PartiePage = {
   titreAccent?: string;
   paragraphes: Paragraphe[];
   cta: { label: string; href?: string };
-  photo: { alt: string; src?: string; rond?: boolean };
+  photo: { alt: string; src?: string; rond?: boolean; legende?: string[] };
   fond: "ivoire" | "sauge" | "sable";
 };
 
@@ -27,7 +27,12 @@ export const parties: PartiePage[] = [
       "Avec moi, il y a de l'écoute, de la bienveillance, du partage, un peu d'humour et surtout aucun jugement.",
     ],
     cta: { label: "Je découvre tes massages", href: "#les-massages" },
-    photo: { alt: "Portrait de Christelle", src: "/images/christelle-a-propos.jpg", rond: true },
+    photo: {
+      alt: "Portrait de Christelle",
+      src: "/images/christelle-a-propos.jpg",
+      rond: true,
+      legende: ["Pour zéro euro, c’est cette photo.", "Pour mille euros et demi, tu choisis !"],
+    },
     fond: "ivoire",
   },
   {
@@ -43,7 +48,7 @@ export const parties: PartiePage[] = [
     ],
     cta: { label: "Je t'invite chez moi" },
     photo: { alt: "Christelle et Fernand" },
-    fond: "sauge",
+    fond: "ivoire",
   },
   {
     titre: "Le cœur",
@@ -56,7 +61,7 @@ export const parties: PartiePage[] = [
     ],
     cta: { label: "Je te propose un projet" },
     photo: { alt: "Projets solidaires" },
-    fond: "ivoire",
+    fond: "sauge",
   },
   {
     titre: "Avant de prendre soin de ton corps,",

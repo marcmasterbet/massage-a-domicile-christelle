@@ -44,15 +44,17 @@
   }
 }
 
+/* Filtre léger : assombrit la photo, un peu plus derrière le texte */
 .scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(20, 22, 16, 0.55) 0%,
-    rgba(20, 22, 16, 0.15) 40%,
-    rgba(20, 22, 16, 0.55) 100%
-  );
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 52%, rgba(20, 22, 16, 0.32) 0%, rgba(20, 22, 16, 0) 100%),
+    linear-gradient(180deg, rgba(20, 22, 16, 0.6) 0%, rgba(20, 22, 16, 0.38) 35%, rgba(20, 22, 16, 0.42) 70%, rgba(20, 22, 16, 0.6) 100%);
+}
+
+.content {
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.35);
 }
 
 .content {
@@ -69,6 +71,13 @@
 @media (max-width: 900px) {
   .hero {
     min-height: 0;
+  }
+  .media {
+    clip-path: none;
+  }
+  .fixed {
+    position: absolute;
+    height: 100%;
   }
   .page {
     min-height: 340px;

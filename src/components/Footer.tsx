@@ -36,7 +36,7 @@ export function Footer() {
         <nav id="les-massages" className={styles.col} aria-label="Les massages">
           <p className={styles.heading}>Les massages</p>
           {PRESTATIONS.map((p) => (
-            <Link key={p.slug} href={`/${p.slug}`}>
+            <Link key={p.slug} href={`/${p.slug}/`}>
               {p.nom}
             </Link>
           ))}
@@ -45,8 +45,8 @@ export function Footer() {
         <nav className={styles.col} aria-label="Le site">
           <p className={styles.heading}>Le site</p>
           <Link href="/">Accueil</Link>
-          <Link href="/a-propos">À propos</Link>
-          <Link href="/blog">Blog</Link>
+          <Link href="/a-propos/">À propos</Link>
+          <Link href="/blog/">Blog</Link>
         </nav>
 
         <div className={styles.col}>
@@ -68,9 +68,9 @@ export function Footer() {
           © 2026 {BRAND} – {PRATICIENNE}
         </p>
         <p>
-          <Link href="/mentions-legales">Mentions légales</Link>
+          <Link href="/mentions-legales/">Mentions légales</Link>
           <span aria-hidden="true"> · </span>
-          <Link href="/confidentialite">Confidentialité</Link>
+          <Link href="/confidentialite/">Confidentialité</Link>
         </p>
       </div>
     </footer>

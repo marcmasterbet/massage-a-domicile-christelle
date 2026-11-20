@@ -55,7 +55,7 @@ export const parties: PartieAccueil[] = [
       "Que tu sois un homme ou une femme, je prends le temps de t'écouter avant de te masser.",
       "Pas de massage standardisé, pas de jugement. Mes mains s'adaptent à tes besoins du moment.",
     ],
-    cta: { label: "Je rencontre Christelle", href: "/a-propos" },
+    cta: { label: "Je rencontre Christelle", href: "/a-propos/" },
     photo: { alt: "Portrait de Christelle", src: "/images/christelle-portrait.jpg" },
     fond: "ivoire",
   },
@@ -65,6 +65,8 @@ export const parties: PartieAccueil[] = [
     titreAccent: "je m'occupe du matériel.",
     paragraphes: [
       "Ma table de massage, mon linge, mes produits et surtout ma bonne humeur : j'apporte tout ce dont j'ai besoin.",
+      "Tu m'as d'ailleurs peut-être déjà croisée à vélo dans les rues de Bayonne, Anglet ou Biarritz.",
+      "Mon vélo s'appelle Fernand !",
       "Pour réserver, il suffit de me contacter. Nous échangeons sur tes besoins et convenons ensemble d'un rendez-vous.",
       "Et le plus agréable dans tout ça ? Une fois ton massage terminé, tu es déjà chez toi.",
     ],

@@ -154,6 +154,34 @@ a.cta:hover,
   object-fit: cover;
 }
 
+/* Photo avec légende */
+.figure {
+  flex: 0 1 400px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.figure .photo {
+  flex: none;
+  width: 100%;
+  max-width: 400px;
+}
+
+.legende {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-titre), Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--framboise);
+}
+
 /* Portrait rond */
 .rond {
   flex: 0 1 400px;
@@ -187,13 +215,25 @@ a.cta:hover,
   .photo {
     flex-basis: 100%;
     max-width: none;
-    height: 360px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    max-height: 460px;
+  }
+  /* Emplacement sans photo : masqué sur téléphone */
+  .vide {
+    display: none;
+  }
+  .title {
+    margin-bottom: 22px;
   }
   .rond {
     flex-basis: auto;
     width: min(300px, 80vw);
     height: auto;
     margin: 0 auto;
+  }
+  .figure {
+    flex-basis: 100%;
   }
   .ctaWrap {
     display: block;

@@ -74,6 +74,7 @@
   font-size: 15px;
   line-height: 1.3;
   padding: 14px;
+  text-shadow: none;
 }
 
 /* Dans le rond : « Appelle-moi au » puis le numéro sur sa propre ligne */

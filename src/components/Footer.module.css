@@ -146,8 +146,25 @@
 @media (max-width: 600px) {
   .inner {
     grid-template-columns: minmax(0, 1fr);
-    padding-top: 48px;
-    gap: 32px;
+    padding-top: 44px;
+    gap: 34px;
+    text-align: center;
+  }
+  .brand,
+  .col {
+    align-items: center;
+  }
+  .horaires {
+    max-width: none;
+  }
+  .reserveWrap {
+    width: 100%;
+  }
+  .col {
+    gap: 2px;
+  }
+  .col a {
+    padding: 9px 0;
   }
   .bottom {
     flex-direction: column;

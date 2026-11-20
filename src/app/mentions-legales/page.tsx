@@ -6,7 +6,7 @@ import { BRAND, PHONE_DISPLAY, PRATICIENNE, SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Mentions légales",
   robots: { index: false },
-  alternates: { canonical: "/mentions-legales" },
+  alternates: { canonical: "/mentions-legales/" },
 };
 
 // Les éléments entre crochets sont à compléter avec Christelle avant la mise en ligne.

@@ -87,6 +87,7 @@ export function Header() {
             href={item.href}
             className={styles.mobileLink}
             aria-current={pathname === item.href ? "page" : undefined}
+            onClick={() => setMenuOpen(false)}
           >
             {item.label}
           </Link>

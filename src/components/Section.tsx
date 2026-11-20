@@ -11,7 +11,7 @@ type Props = {
   titreAccent?: string;
   paragraphes: Paragraphe[];
   cta?: { label: string; href?: string };
-  photo: { alt: string; src?: string; rond?: boolean };
+  photo: { alt: string; src?: string; rond?: boolean; legende?: string[] };
   fond?: "ivoire" | "sauge" | "sable";
   /** Photo à gauche, texte à droite */
   inverse?: boolean;
@@ -54,13 +54,26 @@ export function Section({ id, titre, titreAccent, paragraphes, cta, photo, fond 
             ))}
         </div>
 
-        <div className={`${styles.photo} ${photo.rond ? styles.rond : ""}`}>
-          {photo.src ? (
-            <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 900px) 100vw, 420px" />
-          ) : (
-            <div className={styles.placeholder} role="img" aria-label={`Photo à venir : ${photo.alt}`} />
-          )}
-        </div>
+        {photo.legende ? (
+          <figure className={styles.figure}>
+            <div className={`${styles.photo} ${photo.rond ? styles.rond : ""}`}>
+              {photo.src && <Image src={photo.src} alt={photo.alt} fill sizes="400px" />}
+            </div>
+            <figcaption className={styles.legende}>
+              {photo.legende.map((ligne) => (
+                <span key={ligne}>{ligne}</span>
+              ))}
+            </figcaption>
+          </figure>
+        ) : (
+          <div className={`${styles.photo} ${photo.rond ? styles.rond : ""} ${photo.src ? "" : styles.vide}`}>
+            {photo.src ? (
+              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 900px) 100vw, 420px" />
+            ) : (
+              <div className={styles.placeholder} role="img" aria-label={`Photo à venir : ${photo.alt}`} />
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

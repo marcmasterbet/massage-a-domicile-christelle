@@ -6,7 +6,7 @@ import { PRATICIENNE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Confidentialité",
   robots: { index: false },
-  alternates: { canonical: "/confidentialite" },
+  alternates: { canonical: "/confidentialite/" },
 };
 
 // À relire avec Christelle avant la mise en ligne (et à adapter si un outil de statistiques est ajouté).

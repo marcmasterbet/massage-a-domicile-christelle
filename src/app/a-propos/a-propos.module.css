@@ -1,0 +1,148 @@
+.page {
+  max-width: var(--contenu-max);
+  margin: 0 auto;
+  padding: 48px var(--marge) clamp(64px, 8vw, 112px);
+  display: grid;
+  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  gap: 48px 80px;
+  align-items: start;
+}
+
+/* La photo reste visible pendant la lecture */
+.figure {
+  position: sticky;
+  top: 40px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 10px var(--ivoire), 0 0 0 11px var(--sable);
+}
+
+.portrait img {
+  object-fit: cover;
+}
+
+.legende {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-titre), Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--framboise);
+}
+
+.texte {
+  max-width: 660px;
+}
+
+.partie + .partie {
+  margin-top: 64px;
+  padding-top: 56px;
+  border-top: 1px solid var(--sable);
+}
+
+.titre {
+  margin: 0 0 24px;
+  font-family: var(--font-titre), Georgia, serif;
+  font-weight: 350;
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.titre em {
+  color: var(--framboise);
+}
+
+.partie p {
+  margin: 0 0 16px;
+}
+
+.fort {
+  margin-top: 28px !important;
+  font-family: var(--font-titre), Georgia, serif;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.35;
+  color: var(--olive);
+}
+
+.citation {
+  padding-left: 22px;
+  border-left: 2px solid var(--framboise);
+  font-family: var(--font-titre), Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--framboise);
+}
+
+.signature {
+  margin: 0 !important;
+  font-family: var(--font-titre), Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--framboise);
+}
+
+.signature:first-of-type,
+p:not(.signature) + .signature {
+  margin-top: 24px !important;
+}
+
+/* Boutons : même style que le reste du site */
+.ctaWrap {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.cta {
+  padding: 15px 30px;
+  border-radius: 999px;
+  background: var(--framboise);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 22px rgba(137, 48, 65, 0.22);
+}
+
+a.cta:hover {
+  background: var(--framboise-fonce);
+  color: #fff;
+}
+
+.ctaVerso {
+  background: var(--olive);
+  box-shadow: 0 8px 22px rgba(70, 91, 39, 0.25);
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 32px;
+  }
+  .figure {
+    position: static;
+  }
+  .portrait {
+    width: min(300px, 80vw);
+  }
+  .ctaWrap {
+    display: block;
+    text-align: center;
+  }
+}
