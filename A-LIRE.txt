@@ -1,24 +1,22 @@
 L'AME AGIT Ô CORPS – massages-pays-basque.fr
-Version 6 : page d'accueil (20/11/2026)
+Version 8 : page d'accueil (20/11/2026)
 
 CONTENU
-- index.html : la page d'accueil, autonome (aucun CMS, aucune base de données)
+- index.html : la page d'accueil (haut de page + 4 parties, textes de Jeff mot pour mot)
 - images/logo-lame-agit-o-corps.png : le logo de Christelle
 - images/massage-mains.jpg : la photo du haut de page
 - images/favicon.png : l'icône de l'onglet du navigateur
 
 METTRE EN LIGNE
 Déposer le contenu du dossier (index.html + images/) à la racine de l'hébergement
-du domaine massages-pays-basque.fr (FTP chez l'hébergeur, ou glisser-déposer sur
-Netlify / Vercel / Cloudflare Pages).
+du domaine massages-pays-basque.fr.
+
+RÉSERVATION
+Tous les boutons de réservation ouvrent WhatsApp vers le 07 77 25 85 93
+avec un message prérempli. Pas de formulaire.
 
 À COMPLÉTER AVANT LA MISE EN LIGNE
-- [Texte d'introduction de Jeff] : introduction de la carte des massages
-- [Phrase d'appel de Jeff pour réserver] : bloc rose « Réserver »
-- Le bouton « Ou écris-moi via le formulaire » : formulaire de contact à brancher
-- Liens « Mentions légales » et « Confidentialité » : pages obligatoires à créer
-- Les 2 emplacements « Photo à venir » (mains sur des épaules, portrait de Christelle)
+- Les 4 photos des parties (emplacements vides)
+- Pages « Mentions légales » et « Confidentialité » (obligatoires)
+- Les pages internes (À propos, les 4 massages, Blog)
 - Vérifier l'origine de la photo du haut de page (droits d'utilisation)
-- Les pages internes (À propos, les 4 massages, Blog) restent à construire
-
-Les polices (Fraunces, Figtree, Caveat) sont chargées depuis Google Fonts.

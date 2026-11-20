@@ -25,21 +25,41 @@ a{color:#893041}a:hover{color:#6E2433}
 .menu-dd-list{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:18px;opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s;z-index:10}
 .menu-dd:hover .menu-dd-list,.menu-dd:focus-within .menu-dd-list{opacity:1;visibility:visible}
 .menu-dd-list a:hover{background:#EFDDD8}
+.nav-mob summary::-webkit-details-marker{display:none}
+html,body{overflow-x:hidden}
+@media (max-width: 900px){
+.nav-desk{display:none!important}
+.nav-mob{display:block!important}
+.site-header{justify-content:space-between!important;border-bottom:0!important;padding:14px 16px!important}
+.hero{min-height:0!important}
+.hero-content{padding:36px 20px 48px!important}
+.hero-title{font-size:38px!important;line-height:1.06!important}
+.hero-btn{width:120px!important;height:120px!important;font-size:17px!important;margin-top:24px!important}
+.note-moi{right:8px!important;top:12px!important;font-size:26px!important}
+.route-svg{display:none!important}
+.route-list{display:flex!important}
+.mob-bar{display:flex!important;position:fixed;left:0;right:0;bottom:0;z-index:50;box-shadow:0 -6px 20px rgba(20,22,16,0.12)}
+body{padding-bottom:52px}
+}
+@media (max-width: 480px){
+.hero-title{font-size:34px!important}
+.logo-badge img{height:32px!important}
+}
 </style>
 </head>
 <body>
 <div style="background: #FAF7EF; color: #2B2723; font-family: Figtree, system-ui, sans-serif; font-size: 18px; line-height: 1.65">
 
 <!-- HERO PLEIN ÉCRAN -->
-<section id="accueil" style="position: relative; min-height: 880px; background: #23291B; color: #FFFFFF; display: flex; flex-direction: column; overflow: hidden">
-<img class="hero-zoom" src="images/massage-mains.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%">
+<section id="accueil" class="hero" style="position: relative; min-height: 720px; background: #23291B; color: #FFFFFF; display: flex; flex-direction: column">
+<div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden"><img class="hero-zoom" src="images/massage-mains.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%"></div>
 <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,22,16,0.55) 0%, rgba(20,22,16,0.15) 40%, rgba(20,22,16,0.55) 100%)"></div>
-<header style="position: relative; max-width: 1440px; width: 100%; margin: 0 auto; box-sizing: border-box; padding: 26px clamp(20px, 5vw, 72px) 22px; border-bottom: 1px solid rgba(255,255,255,0.35); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 56px; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase">
-<nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 10px 44px; flex: 1 1 300px">
+<header class="site-header" style="position: relative; z-index: 20; max-width: 1440px; width: 100%; margin: 0 auto; box-sizing: border-box; padding: 18px clamp(20px, 5vw, 72px) 16px; border-bottom: 1px solid rgba(255,255,255,0.35); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 56px; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase">
+<nav class="nav-desk" aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 10px 44px; flex: 1 1 300px">
 <a href="#accueil" style="color: #FFFFFF; text-decoration: none">Accueil</a>
 <a href="a-propos.html" style="color: #FFFFFF; text-decoration: none">À propos</a>
 <div class="menu-dd">
-<a href="#massages" aria-haspopup="true" style="color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; gap: 8px">Les massages<svg width="10" height="7" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1.5 L 5 5.5 L 9 1.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+<a href="massage-relaxant-intuitif.html" aria-haspopup="true" style="color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; gap: 8px">Les massages<svg width="10" height="7" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1.5 L 5 5.5 L 9 1.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 <div class="menu-dd-list">
 <div style="background: #FAF7EF; border-radius: 2px; padding: 8px 0; box-shadow: 0 12px 32px rgba(20,22,16,0.25)">
 <a href="massage-relaxant-intuitif.html" style="display: block; padding: 14px 24px; color: #2B2723; text-decoration: none; font-family: Fraunces, serif; font-size: 19px; letter-spacing: 0; text-transform: none; font-weight: 400; white-space: nowrap">Massage relaxant et intuitif</a>
@@ -50,174 +70,89 @@ a{color:#893041}a:hover{color:#6E2433}
 </div>
 </div>
 </nav>
-<a href="#accueil" aria-label="L'ame agit ô corps – accueil" style="display: block; line-height: 0; flex: 0 0 auto; background: #FAF7EF; padding: 7px 18px; border-radius: 40px; box-shadow: 0 6px 20px rgba(20,22,16,0.25)"><img src="images/logo-lame-agit-o-corps.png" alt="L'ame agit ô corps – Massage intuitif et bien-être" style="height: 44px; width: auto"></a>
-<nav aria-label="Navigation secondaire" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 10px 44px; flex: 1 1 300px">
+<a class="logo-badge" href="#accueil" aria-label="L'ame agit ô corps – accueil" style="display: block; line-height: 0; flex: 0 0 auto; background: #FAF7EF; padding: 6px 16px; border-radius: 40px; box-shadow: 0 6px 20px rgba(20,22,16,0.25)"><img src="images/logo-lame-agit-o-corps.png" alt="L'ame agit ô corps – Massage intuitif et bien-être" style="height: 38px; width: auto"></a>
+<nav class="nav-desk" aria-label="Navigation secondaire" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 10px 44px; flex: 1 1 300px">
 <a href="blog.html" style="color: #FFFFFF; text-decoration: none">Blog</a>
-<a href="#reserver" style="color: #FFFFFF; text-decoration: none; border: 1px solid rgba(255,255,255,0.8); padding: 11px 20px; border-radius: 2px">Réserver</a>
+<a href="https://wa.me/33777258593?text=Bonjour%20Christelle%2C%20je%20souhaite%20r%C3%A9server%20un%20massage." style="color: #FFFFFF; text-decoration: none; border: 1px solid rgba(255,255,255,0.8); padding: 11px 20px; border-radius: 2px">Réserver</a>
 </nav>
+<details class="nav-mob" style="display: none">
+<summary aria-label="Ouvrir le menu" style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; color: #FFFFFF; padding: 12px 0 12px 12px; min-height: 44px; box-sizing: border-box">Menu<svg width="22" height="14" viewBox="0 0 22 14" fill="none" aria-hidden="true"><path d="M1 1 H21 M1 7 H21 M1 13 H21" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"></path></svg></summary>
+<div style="position: absolute; left: 12px; right: 12px; top: 100%; background: #FAF7EF; border-radius: 4px; padding: 8px 22px 18px; box-shadow: 0 16px 40px rgba(20,22,16,0.3); text-transform: none; letter-spacing: 0; font-size: 18px; font-weight: 500">
+<a href="#accueil" style="display: block; padding: 14px 0; border-bottom: 1px solid #E8DCC8; color: #2B2723; text-decoration: none">Accueil</a>
+<a href="a-propos.html" style="display: block; padding: 14px 0; border-bottom: 1px solid #E8DCC8; color: #2B2723; text-decoration: none">À propos</a>
+<a href="massage-relaxant-intuitif.html" style="display: block; padding: 14px 0; border-bottom: 1px solid #E8DCC8; color: #2B2723; text-decoration: none">Massage relaxant et intuitif</a>
+<a href="massage-prenatal-postnatal.html" style="display: block; padding: 14px 0; border-bottom: 1px solid #E8DCC8; color: #2B2723; text-decoration: none">Massage prénatal et postnatal</a>
+<a href="soin-minceur.html" style="display: block; padding: 14px 0; border-bottom: 1px solid #E8DCC8; color: #2B2723; text-decoration: none">Soin minceur</a>
+<a href="soin-liftant-japonais-visage.html" style="display: block; padding: 14px 0; border-bottom: 1px solid #E8DCC8; color: #2B2723; text-decoration: none">Soin liftant japonais du visage</a>
+<a href="blog.html" style="display: block; padding: 14px 0; border-bottom: 1px solid #E8DCC8; color: #2B2723; text-decoration: none">Blog</a>
+<a href="https://wa.me/33777258593?text=Bonjour%20Christelle%2C%20je%20souhaite%20r%C3%A9server%20un%20massage." style="display: block; margin-top: 16px; background: #893041; color: #FFFFFF; text-align: center; text-decoration: none; padding: 15px; border-radius: 2px; font-weight: 600">Réserver</a>
+</div>
+</details>
 </header>
-<div style="position: relative; flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px clamp(20px, 5vw, 72px) 96px">
+<div class="hero-content" style="position: relative; flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 44px clamp(20px, 5vw, 72px) 56px">
 <h1 style="margin: 0; font-weight: 400; max-width: 1100px">
-<span style="display: block; font-family: Figtree, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #E3E7D6; margin-bottom: 28px">Massage à domicile au Pays basque</span>
-<span style="display: block; font-family: Fraunces, Georgia, serif; font-size: clamp(46px, 6.4vw, 96px); line-height: 1.02; letter-spacing: -0.02em; font-weight: 300; color: #FFFFFF">Le corps tendu, la tête pleine, <em style="font-style: italic">besoin de souffler&#8239;?</em></span>
+<span style="display: block; font-family: Figtree, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #E3E7D6; margin-bottom: 18px">Massage à domicile au Pays basque&#8239;:</span>
+<span class="hero-title" style="display: block; font-family: Fraunces, Georgia, serif; font-size: clamp(40px, 4.8vw, 72px); line-height: 1.02; letter-spacing: -0.02em; font-weight: 300; color: #FFFFFF">le corps tendu, la tête pleine, <em style="font-style: italic">besoin de souffler&#8239;?</em></span>
 </h1>
-<p style="margin: 30px 0 0; font-family: Fraunces, serif; font-style: italic; font-weight: 300; font-size: clamp(22px, 2.2vw, 30px); color: #F2EBDD">Ne bouge pas, j'arrive avec ma table de massage.</p>
-<p style="margin: 18px 0 0; max-width: 560px; font-size: 17px; line-height: 1.6; color: #E8E2D6">Je prends soin de toi à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos, avec des massages 100&#8239;% personnalisés.</p>
-<a href="#reserver" style="margin-top: 44px; width: 172px; height: 172px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.7); display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; box-sizing: border-box; color: #FFFFFF; text-decoration: none; font-family: Fraunces, serif; font-style: italic; font-size: 21px; line-height: 1.25">Je réserve mon massage</a>
-<a href="tel:+33777258593" style="margin-top: 26px; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 0.2em">07 77 25 85 93</a>
+<p style="margin: 20px 0 0; font-family: Fraunces, serif; font-style: italic; font-weight: 300; font-size: clamp(20px, 1.8vw, 26px); color: #F2EBDD">Ne bouge pas, j'arrive avec ma table de massage.</p>
+<p style="margin: 12px 0 0; max-width: 560px; font-size: 16px; line-height: 1.6; color: #E8E2D6">Je prends soin de toi à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos, avec des massages 100&#8239;% personnalisés.</p>
+<a class="hero-btn" href="https://wa.me/33777258593?text=Bonjour%20Christelle%2C%20je%20souhaite%20r%C3%A9server%20un%20massage." style="margin-top: 28px; width: 136px; height: 136px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.7); display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; box-sizing: border-box; color: #FFFFFF; text-decoration: none; font-family: Fraunces, serif; font-style: italic; font-size: 18px; line-height: 1.25">Je réserve mon massage</a>
 </div>
 </section>
 
-<!-- BANDEAU VILLES -->
-<div style="background: #E8DCC8; border-top: 1px solid #D9CAB0; border-bottom: 1px solid #D9CAB0; padding: 22px clamp(20px, 5vw, 72px)">
-<p style="margin: 0 auto; max-width: 1280px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 22px; font-family: Fraunces, serif; font-style: italic; font-size: clamp(20px, 2.2vw, 28px); color: #465B27; text-align: center"><span>Bayonne</span><span aria-hidden="true" style="color: #893041">·</span><span>Anglet</span><span aria-hidden="true" style="color: #893041">·</span><span>Biarritz</span><span aria-hidden="true" style="color: #893041">·</span><span>Saint-Pierre-d’Irube</span><span aria-hidden="true" style="color: #893041">·</span><span>Tarnos</span></p>
+<!-- PARTIE 1 -->
+<section style="background: #FAF7EF">
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; align-items: center; gap: 48px 72px">
+<div style="flex: 1 1 460px; min-width: 0; max-width: 640px">
+<h2 style="margin: 0; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(32px, 3.6vw, 52px); line-height: 1.12; letter-spacing: -0.015em">Ton dos tire, tes épaules se crispent… <em style="color: #893041">Et toi, tu continues.</em></h2>
+<p style="margin: 30px 0 0">Entre le travail, les obligations du quotidien et les imprévus, tu trouves toujours une bonne raison de reporter le moment que tu voulais t'accorder.</p>
+<p style="margin: 22px 0 0">Tu aimerais soulager tes tensions, évacuer ton stress et prendre soin de toi.</p>
+<p style="margin: 22px 0 0">Mais à quand remonte la dernière fois où tu l'as vraiment fait&#8239;?</p>
+<a href="https://wa.me/33777258593?text=Bonjour%20Christelle%2C%20je%20souhaite%20r%C3%A9server%20un%20massage." style="display: inline-block; margin-top: 36px; background: #893041; color: #FFFFFF; text-decoration: none; padding: 17px 30px; border-radius: 2px; font-weight: 600; font-size: 17px">Je prends soin de moi</a>
 </div>
-
-<!-- 01 LE CORPS -->
-<section style="max-width: 1280px; margin: 0 auto; padding: clamp(80px, 10vw, 140px) clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; gap: 40px 64px">
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: flex-end">
-<div style="flex: 1 1 460px; min-width: 0">
-<p style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #465B27">Le corps</p>
-<h2 style="margin: 0; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(34px, 3.8vw, 54px); line-height: 1.1; letter-spacing: -0.015em">Ton dos tire, tes épaules se crispent… <em style="color: #893041">Et toi, tu continues.</em></h2>
-<p style="margin: 32px 0 0">Entre le travail, les obligations du quotidien et les imprévus, tu trouves toujours une bonne raison de reporter le moment que tu voulais t'accorder.</p>
-<p style="margin: 18px 0 0">Tu aimerais soulager tes tensions, évacuer ton stress et prendre soin de toi.</p>
-<p style="margin: 30px 0 0; font-family: Fraunces, serif; font-style: italic; font-size: 26px; line-height: 1.35; color: #465B27">Mais à quand remonte la dernière fois où tu l'as vraiment fait&#8239;?</p>
-<a href="#reserver" style="display: inline-block; margin-top: 34px; font-weight: 600; text-decoration: none; border-bottom: 1.5px solid #893041; padding-bottom: 3px">Je prends soin de moi →</a>
-</div>
-<div role="img" aria-label="Emplacement photo : mains de Christelle sur des épaules" style="flex: 1 1 280px; max-width: 360px; height: 420px; background: #CCD8C5; border: 1.5px solid #B5C4AC; border-radius: 4px; display: flex; flex-direction: column; justify-content: flex-end; padding: 26px; box-sizing: border-box">
-<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #465B27">Photo à venir</span>
-<span style="font-family: Fraunces, serif; font-style: italic; font-size: 19px; color: #465B27; line-height: 1.35; margin-top: 6px">Ses mains sur des épaules, en gros plan</span>
-</div>
+<div role="img" aria-label="Emplacement photo : Ses mains sur des épaules, en gros plan" style="flex: 1 1 300px; max-width: 420px; height: 480px; background: #CCD8C5; border: 1.5px solid #B5C4AC; border-radius: 4px; display: flex; flex-direction: column; justify-content: flex-end; padding: 26px; box-sizing: border-box"></div>
 </div>
 </section>
 
-<!-- 02 LA TÊTE -->
-<section style="background: #CCD8C5; color: #2B2723">
-<div style="max-width: 1280px; margin: 0 auto; padding: clamp(80px, 10vw, 140px) clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; gap: 40px 64px">
-<div style="flex: 999 1 520px; min-width: 0; max-width: 820px">
-<p style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #465B27">La tête</p>
-<h2 style="margin: 0; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(34px, 3.8vw, 54px); line-height: 1.1; letter-spacing: -0.015em; color: #2B2723">Ta journée est terminée, mais dans ta tête, <em style="color: #893041">elle continue.</em></h2>
-<p style="margin: 32px 0 0; max-width: 620px">Même lorsque tu t'installes dans ton canapé, tu penses déjà à ce que tu dois faire demain.</p>
-<p style="margin: 18px 0 0; max-width: 620px">Tu voudrais pouvoir déconnecter sans regarder l'heure, sans penser aux autres et sans culpabiliser de ne rien faire.</p>
-<p style="margin: 56px 0 0; padding-top: 40px; border-top: 1px solid #A3B497; font-family: Fraunces, serif; font-style: italic; font-weight: 300; font-size: clamp(32px, 3.6vw, 52px); line-height: 1.15; color: #33441B">Juste une heure pendant laquelle tu n'as de comptes à rendre à personne.</p>
-<a href="#reserver" style="display: inline-block; margin-top: 44px; background: #893041; color: #FFFFFF; text-decoration: none; padding: 18px 30px; border-radius: 2px; font-weight: 600; font-size: 17px">Je m'offre une pause</a>
+<!-- PARTIE 2 -->
+<section style="background: #CCD8C5">
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; align-items: center; gap: 48px 72px">
+<div role="img" aria-label="Emplacement photo : moment de détente" style="flex: 1 1 300px; max-width: 420px; height: 480px; background: #FAF7EF; border: 1.5px solid #B5C4AC; border-radius: 4px"></div>
+<div style="flex: 1 1 460px; min-width: 0; max-width: 640px">
+<h2 style="margin: 0; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(32px, 3.6vw, 52px); line-height: 1.12; letter-spacing: -0.015em">Ta journée est terminée, mais dans ta tête, <em style="color: #893041">elle continue.</em></h2>
+<p style="margin: 30px 0 0">Même lorsque tu t'installes dans ton canapé, tu penses déjà à ce que tu dois faire demain.</p>
+<p style="margin: 22px 0 0">Tu voudrais pouvoir déconnecter sans regarder l'heure, sans penser aux autres et sans culpabiliser de ne rien faire.</p>
+<p style="margin: 22px 0 0">Juste une heure pendant laquelle tu n'as de comptes à rendre à personne.</p>
+<a href="https://wa.me/33777258593?text=Bonjour%20Christelle%2C%20je%20souhaite%20r%C3%A9server%20un%20massage." style="display: inline-block; margin-top: 36px; background: #893041; color: #FFFFFF; text-decoration: none; padding: 17px 30px; border-radius: 2px; font-weight: 600; font-size: 17px">Je m'offre une pause</a>
 </div>
 </div>
 </section>
 
-<!-- 03 L'ÉCOUTE / CHRISTELLE -->
-<section id="christelle" style="max-width: 1280px; margin: 0 auto; padding: clamp(80px, 10vw, 140px) clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; gap: 40px 64px">
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: flex-start">
-<div style="flex: 1 1 300px; max-width: 400px; position: relative">
-<div role="img" aria-label="Emplacement photo : portrait de Christelle" style="height: 500px; background: #EFDDD8; border: 1.5px solid #E2C8C0; border-radius: 4px 4px 200px 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px; box-sizing: border-box">
-<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #465B27">Photo à venir</span>
-<span style="font-family: Fraunces, serif; font-style: italic; font-size: 19px; color: #465B27; line-height: 1.35; margin-top: 6px; max-width: 240px">Portrait de Christelle, souriante, lumière naturelle</span>
+<!-- PARTIE 3 -->
+<section id="christelle" style="background: #FAF7EF">
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; align-items: center; gap: 48px 72px">
+<div style="flex: 1 1 460px; min-width: 0; max-width: 640px">
+<h2 style="margin: 0; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(32px, 3.6vw, 52px); line-height: 1.12; letter-spacing: -0.015em">Pour moi, un massage bien-être commence par l'écoute, <em style="color: #893041">pas par le toucher.</em></h2>
+<p style="margin: 30px 0 0">Je suis Christelle, praticienne du bien-être. J'ai commencé à exercer en 2020.</p>
+<p style="margin: 22px 0 0">Je suis notamment certifiée en massage pré et postnatal et en soin liftant japonais du visage.</p>
+<p style="margin: 22px 0 0">Que tu sois un homme ou une femme, je prends le temps de t'écouter avant de te masser.</p>
+<p style="margin: 22px 0 0">Pas de massage standardisé, pas de jugement. Mes mains s'adaptent à tes besoins du moment.</p>
+<a href="a-propos.html" style="display: inline-block; margin-top: 36px; background: #893041; color: #FFFFFF; text-decoration: none; padding: 17px 30px; border-radius: 2px; font-weight: 600; font-size: 17px">Je rencontre Christelle</a>
 </div>
-<p style="margin: 0; position: absolute; right: -20px; top: 36px; font-family: Caveat, cursive; font-size: 30px; color: #893041; transform: rotate(5deg)">c'est moi&#8239;!</p>
-</div>
-<div style="flex: 1 1 420px; min-width: 0">
-<p style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #465B27">L'écoute</p>
-<h2 style="margin: 0; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(34px, 3.8vw, 54px); line-height: 1.1; letter-spacing: -0.015em">Pour moi, un massage bien-être commence par l'écoute, <em style="color: #893041">pas par le toucher.</em></h2>
-<p style="margin: 32px 0 0">Je suis Christelle, praticienne du bien-être. J'ai commencé à exercer en 2020.</p>
-<p style="margin: 18px 0 0">Je suis notamment certifiée en massage pré et postnatal et en soin liftant japonais du visage.</p>
-<ul aria-label="En bref" style="list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px">
-<li style="border: 1.5px solid #465B27; color: #465B27; padding: 7px 14px; font-size: 15px; font-weight: 600">Depuis 2020</li>
-<li style="border: 1.5px solid #465B27; color: #465B27; padding: 7px 14px; font-size: 15px; font-weight: 600">Certifiée massage pré et postnatal</li>
-<li style="border: 1.5px solid #465B27; color: #465B27; padding: 7px 14px; font-size: 15px; font-weight: 600">Certifiée soin liftant japonais</li>
-</ul>
-<p style="margin: 28px 0 0">Que tu sois un homme ou une femme, je prends le temps de t'écouter avant de te masser.</p>
-<p style="margin: 18px 0 0; font-family: Fraunces, serif; font-style: italic; font-size: 24px; line-height: 1.4; color: #465B27">Pas de massage standardisé, pas de jugement. Mes mains s'adaptent à tes besoins du moment.</p>
-<a href="#christelle" style="display: inline-block; margin-top: 34px; font-weight: 600; text-decoration: none; border-bottom: 1.5px solid #893041; padding-bottom: 3px">Je rencontre Christelle →</a>
-</div>
+<div role="img" aria-label="Emplacement photo : Portrait de Christelle, lumière naturelle" style="flex: 1 1 300px; max-width: 420px; height: 480px; background: #EFDDD8; border: 1.5px solid #E2C8C0; border-radius: 4px 4px 200px 200px; display: flex; flex-direction: column; justify-content: flex-end; padding: 26px; box-sizing: border-box"></div>
 </div>
 </section>
 
-<!-- LES MASSAGES -->
-<section id="massages" style="background: #E8DCC8; border-top: 1px solid #D9CAB0; border-bottom: 1px solid #D9CAB0">
-<div style="max-width: 980px; margin: 0 auto; padding: clamp(80px, 10vw, 130px) clamp(20px, 5vw, 72px)">
-<p style="margin: 0; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #465B27">Les massages</p>
-<h2 style="margin: 14px 0 0; text-align: center; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(36px, 4vw, 56px); line-height: 1.1">Mes massages <em style="color: #893041">à domicile</em></h2>
-<p style="margin: 18px auto 0; max-width: 560px; text-align: center; color: #4A443D">[Texte d'introduction de Jeff]</p>
-<nav aria-label="Les massages" style="margin-top: 64px; display: flex; flex-direction: column">
-<a href="massage-relaxant-intuitif.html" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="font-family: Fraunces, serif; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.2">Massage relaxant et intuitif</span>
-<span style="font-size: 16px; font-weight: 600; color: #893041; white-space: nowrap">Découvrir →</span>
-</a>
-<a href="massage-prenatal-postnatal.html" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="font-family: Fraunces, serif; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.2">Massage prénatal et postnatal</span>
-<span style="font-size: 16px; font-weight: 600; color: #893041; white-space: nowrap">Découvrir →</span>
-</a>
-<a href="soin-minceur.html" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="font-family: Fraunces, serif; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.2">Soin minceur</span>
-<span style="font-size: 16px; font-weight: 600; color: #893041; white-space: nowrap">Découvrir →</span>
-</a>
-<a href="soin-liftant-japonais-visage.html" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; border-bottom: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="font-family: Fraunces, serif; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.2">Soin liftant japonais du visage</span>
-<span style="font-size: 16px; font-weight: 600; color: #893041; white-space: nowrap">Découvrir →</span>
-</a>
-</nav>
-</div>
-</section>
-
-<!-- 04 CHEZ TOI -->
-<section id="zone" style="max-width: 1280px; margin: 0 auto; padding: clamp(80px, 10vw, 140px) clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; gap: 40px 64px">
-<div style="flex: 999 1 520px; min-width: 0">
-<p style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #465B27">Chez toi</p>
-<h2 style="margin: 0; max-width: 860px; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(34px, 3.8vw, 54px); line-height: 1.1; letter-spacing: -0.015em">Ton massage à domicile&#8239;: tu n'as rien à apporter, <em style="color: #893041">je m'occupe du matériel.</em></h2>
-<div style="margin-top: 44px; display: flex; flex-wrap: wrap; gap: 40px 64px; align-items: center">
-<div style="flex: 1 1 340px; min-width: 0">
-<p style="margin: 0">Ma table de massage, mon linge, mes produits et surtout ma bonne humeur&#8239;: j'apporte tout ce dont j'ai besoin.</p>
-<ul aria-label="Ce que j'apporte" style="list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-family: Caveat, cursive; font-size: 30px; line-height: 1.2; color: #2B2723">
-<li style="display: flex; align-items: center; gap: 12px"><svg width="26" height="22" viewBox="0 0 26 22" fill="none" aria-hidden="true"><path d="M2 12 C 6 14, 8 17, 10 20 C 14 11, 19 5, 24 2" stroke="#465B27" stroke-width="2.6" stroke-linecap="round"></path></svg>ma table de massage</li>
-<li style="display: flex; align-items: center; gap: 12px"><svg width="26" height="22" viewBox="0 0 26 22" fill="none" aria-hidden="true"><path d="M2 12 C 6 14, 8 17, 10 20 C 14 11, 19 5, 24 2" stroke="#465B27" stroke-width="2.6" stroke-linecap="round"></path></svg>mon linge</li>
-<li style="display: flex; align-items: center; gap: 12px"><svg width="26" height="22" viewBox="0 0 26 22" fill="none" aria-hidden="true"><path d="M2 12 C 6 14, 8 17, 10 20 C 14 11, 19 5, 24 2" stroke="#465B27" stroke-width="2.6" stroke-linecap="round"></path></svg>mes produits</li>
-<li style="display: flex; align-items: center; gap: 12px; color: #893041"><svg width="26" height="22" viewBox="0 0 26 22" fill="none" aria-hidden="true"><path d="M2 12 C 6 14, 8 17, 10 20 C 14 11, 19 5, 24 2" stroke="#893041" stroke-width="2.6" stroke-linecap="round"></path></svg>et surtout ma bonne humeur</li>
-</ul>
-</div>
-
-</div>
-
-<!-- itinéraire -->
-<div style="margin-top: 72px; border-top: 1px solid #D9CAB0; padding-top: 40px">
-<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #465B27">Où je me déplace</p>
-<svg role="img" aria-label="Zone d'intervention : Biarritz, Anglet, Tarnos, Bayonne et Saint-Pierre-d'Irube" width="100%" viewBox="0 0 1000 230" fill="none" style="margin-top: 18px; display: block">
-<path d="M18 40 q 8 -8 16 0 t 16 0 M10 80 q 8 -8 16 0 t 16 0 M18 120 q 8 -8 16 0 t 16 0 M10 160 q 8 -8 16 0 t 16 0" stroke="#9FB0B5" stroke-width="2" stroke-linecap="round"></path>
-<text x="22" y="205" fill="#6E8389" font-family="Fraunces, serif" font-style="italic" font-size="20">l'océan</text>
-<path d="M140 175 C 200 120, 250 110, 300 115 C 360 120, 420 40, 520 48 C 590 54, 560 150, 620 150 C 700 150, 760 190, 860 172" stroke="#893041" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="1 11"></path>
-<circle cx="140" cy="175" r="8" fill="#465B27"></circle>
-<circle cx="300" cy="115" r="8" fill="#465B27"></circle>
-<circle cx="520" cy="48" r="8" fill="#465B27"></circle>
-<circle cx="620" cy="150" r="8" fill="#465B27"></circle>
-<circle cx="860" cy="172" r="8" fill="#465B27"></circle>
-<g font-family="Fraunces, serif" font-size="26" fill="#2B2723">
-<text x="140" y="218" text-anchor="middle">Biarritz</text>
-<text x="300" y="92" text-anchor="middle">Anglet</text>
-<text x="548" y="56">Tarnos</text>
-<text x="620" y="196" text-anchor="middle">Bayonne</text>
-<text x="860" y="140" text-anchor="middle">Saint-Pierre-d’Irube</text>
-</g>
-</svg>
-</div>
-
-<div style="margin-top: 64px; max-width: 760px">
-<p style="margin: 0">Pour réserver, il suffit de me contacter. Nous échangeons sur tes besoins et convenons ensemble d'un rendez-vous.</p>
-<p style="margin: 32px 0 0; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(28px, 3vw, 40px); line-height: 1.25">Et le plus agréable dans tout ça&#8239;? <em style="color: #893041">Une fois ton massage terminé, tu es déjà chez toi.</em></p>
-<a href="#reserver" style="display: inline-block; margin-top: 40px; background: #893041; color: #FFFFFF; text-decoration: none; padding: 18px 30px; border-radius: 2px; font-weight: 600; font-size: 17px">Je choisis mon créneau</a>
-</div>
-</div>
-</section>
-
-<!-- RÉSERVER -->
-<section id="reserver" style="background: #D8B09C; color: #2B2723">
-<div style="max-width: 1280px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 40px 64px">
-<div style="flex: 1 1 520px; min-width: 0">
-<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #6E2433">Réserver</p>
-<p style="margin: 16px 0 0; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(36px, 4.4vw, 62px); line-height: 1.08">[Phrase d'appel de Jeff pour réserver]</p>
-<p style="margin: 22px 0 0; font-family: Caveat, cursive; font-size: 30px; color: #6E2433">Christelle</p>
-</div>
-<div style="flex: 0 1 420px; display: flex; flex-direction: column; gap: 14px">
-<a href="tel:+33777258593" style="display: block; background: #FAF7EF; color: #893041; text-decoration: none; padding: 20px 28px; border-radius: 2px"><span style="display: block; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase">Appelle-moi</span><span style="display: block; font-family: Fraunces, serif; font-size: 36px; line-height: 1.2">07 77 25 85 93</span></a>
-<a href="#reserver" style="display: block; border: 1.5px solid #6E2433; color: #6E2433; text-decoration: none; padding: 18px 28px; border-radius: 2px; font-weight: 600">Ou écris-moi via le formulaire →</a>
+<!-- PARTIE 4 -->
+<section id="reserver" style="background: #E8DCC8">
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; align-items: center; gap: 48px 72px">
+<div role="img" aria-label="Emplacement photo : table de massage installée à domicile" style="flex: 1 1 300px; max-width: 420px; height: 480px; background: #FAF7EF; border: 1.5px solid #D9CAB0; border-radius: 4px"></div>
+<div style="flex: 1 1 460px; min-width: 0; max-width: 640px">
+<h2 style="margin: 0; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(32px, 3.6vw, 52px); line-height: 1.12; letter-spacing: -0.015em">Ton massage à domicile&#8239;: tu n'as rien à apporter, <em style="color: #893041">je m'occupe du matériel.</em></h2>
+<p style="margin: 30px 0 0">Ma table de massage, mon linge, mes produits et surtout ma bonne humeur&#8239;: j'apporte tout ce dont j'ai besoin.</p>
+<p style="margin: 22px 0 0">Pour réserver, il suffit de me contacter. Nous échangeons sur tes besoins et convenons ensemble d'un rendez-vous.</p>
+<p style="margin: 22px 0 0">Et le plus agréable dans tout ça&#8239;? Une fois ton massage terminé, tu es déjà chez toi.</p>
+<a href="https://wa.me/33777258593?text=Bonjour%20Christelle%2C%20je%20souhaite%20r%C3%A9server%20un%20massage." style="display: inline-block; margin-top: 36px; background: #893041; color: #FFFFFF; text-decoration: none; padding: 17px 30px; border-radius: 2px; font-weight: 600; font-size: 17px">Je choisis mon créneau</a>
 </div>
 </div>
 </section>
@@ -226,7 +161,6 @@ a{color:#893041}a:hover{color:#6E2433}
 <footer style="max-width: 1280px; margin: 0 auto; padding: 56px clamp(20px, 5vw, 72px) 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px 56px; font-size: 16px; color: #4A443D">
 <div style="flex: 1 1 280px; min-width: 0">
 <img src="images/logo-lame-agit-o-corps.png" alt="L'ame agit ô corps – Massage intuitif et bien-être" style="height: 76px; width: auto">
-<p style="margin: 18px 0 0; max-width: 340px">Massages à domicile à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos.</p>
 </div>
 <nav aria-label="Pied de page" style="flex: 0 1 auto; display: flex; flex-direction: column; gap: 8px">
 <a href="#accueil" style="color: #2B2723; text-decoration: none">Accueil</a>
@@ -239,12 +173,17 @@ a{color:#893041}a:hover{color:#6E2433}
 </nav>
 <div style="flex: 0 1 auto; display: flex; flex-direction: column; gap: 8px">
 <a href="tel:+33777258593" style="color: #465B27; font-weight: 600; text-decoration: none">07 77 25 85 93</a>
+<a href="https://wa.me/33777258593?text=Bonjour%20Christelle%2C%20je%20souhaite%20r%C3%A9server%20un%20massage." style="color: #2B2723; text-decoration: none">WhatsApp</a>
 <a href="https://www.instagram.com/l.ame.agit.o.corps/" style="color: #2B2723; text-decoration: none">Instagram</a>
 <a href="https://www.facebook.com/omdanges" style="color: #2B2723; text-decoration: none">Facebook</a>
 </div>
 <p style="flex: 1 1 100%; margin: 16px 0 0; padding-top: 24px; border-top: 1px solid #D9CAB0; font-size: 14px; color: #5C554D">© 2026 L'ame agit ô corps – Christelle Georges · <a href="#accueil" style="color: #5C554D">Mentions légales</a> · <a href="#accueil" style="color: #5C554D">Confidentialité</a></p>
 </footer>
 
+<div class="mob-bar" style="display: none">
+<a href="tel:+33777258593" style="flex: 1 1 0; display: flex; align-items: center; justify-content: center; min-height: 52px; background: #FAF7EF; color: #465B27; text-decoration: none; font-weight: 600; border-top: 1px solid #D9CAB0">Appeler</a>
+<a href="https://wa.me/33777258593?text=Bonjour%20Christelle%2C%20je%20souhaite%20r%C3%A9server%20un%20massage." style="flex: 1 1 0; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; background: #893041; color: #FFFFFF; text-decoration: none; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5 L4.8 16.6 A8.5 8.5 0 1 1 8 19.6 Z"></path><path d="M9 8.5 c0 3 2.5 6 6 6.5 l1.2-1.4 -2-1 -0.9 0.8 c-1.2-0.5-2.2-1.5-2.7-2.7 l0.8-0.9 -1-2 Z"></path></svg>WhatsApp</a>
+</div>
 </div>
 </body>
 </html>
