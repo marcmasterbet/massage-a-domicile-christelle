@@ -18,6 +18,7 @@ export const SERVICES: Service[] = [
     texte:
       "Le dos tendu, les épaules crispées, le stress qui s'accumule ? Ce massage personnalisé s'adapte aux besoins de ton corps et à ton ressenti du moment. Je prends le temps de t'écouter pour t'offrir un massage qui favorise la détente musculaire, la relaxation et le lâcher-prise.",
     cta: "Je libère mes tensions",
+    photo: "/images/service-relaxant.jpg",
     faq: [
       {
         question: "Quelle est la différence entre un massage relaxant et un massage intuitif ?",
@@ -42,6 +43,7 @@ export const SERVICES: Service[] = [
     texte:
       "Avant comme après l'accouchement, ton corps mérite une attention particulière. Spécialement formée aux massages pré et postnataux, je t'accompagne dans cette période de changements avec des gestes adaptés, pour favoriser la détente, apaiser les tensions corporelles et t'accorder un moment de douceur.",
     cta: "Je prends soin de moi",
+    photo: "/images/service-prenatal.jpg",
     faq: [
       {
         question: "Quels sont les bienfaits d’un massage prénatal ?",
@@ -66,6 +68,7 @@ export const SERVICES: Service[] = [
     texte:
       "Tu souhaites prendre soin de ta silhouette et te sentir mieux dans ton corps ? Le soin minceur s'inscrit dans une démarche personnalisée de bien-être corporel. À l'unité ou sous forme de cure, je t'accompagne à ton rythme, pour prendre soin de ton corps et apprendre à l'aimer, sans pression ni jugement.",
     cta: "Je prends soin de ma silhouette",
+    photo: "/images/service-minceur.jpg",
     faq: [
       {
         question: "En quoi consiste un soin minceur ?",
@@ -90,6 +93,7 @@ export const SERVICES: Service[] = [
     texte:
       "Inspiré des techniques traditionnelles japonaises, ce massage du visage associe des gestes précis, doux et rythmés. Son objectif ? Détendre les traits, favoriser l'éclat naturel de la peau et procurer une sensation de relaxation. Je te propose ce soin à l'unité ou sous forme de cure.",
     cta: "J'offre une pause à mon visage",
+    photo: "/images/service-liftant-japonais.jpg",
     faq: [
       {
         question: "En quoi consiste le soin liftant japonais du visage ?",
