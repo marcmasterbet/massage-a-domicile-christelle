@@ -21,6 +21,10 @@ a{color:#893041}a:hover{color:#6E2433}
 @keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.14)}}
 .hero-zoom{animation:heroZoom 24s ease-out infinite alternate;transform-origin:50% 45%;will-change:transform}
 @media (prefers-reduced-motion: reduce){.hero-zoom{animation:none}}
+.menu-dd{position:relative}
+.menu-dd-list{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:18px;opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s;z-index:10}
+.menu-dd:hover .menu-dd-list,.menu-dd:focus-within .menu-dd-list{opacity:1;visibility:visible}
+.menu-dd-list a:hover{background:#EFDDD8}
 </style>
 </head>
 <body>
@@ -31,14 +35,25 @@ a{color:#893041}a:hover{color:#6E2433}
 <img class="hero-zoom" src="images/massage-mains.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%">
 <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,22,16,0.55) 0%, rgba(20,22,16,0.15) 40%, rgba(20,22,16,0.55) 100%)"></div>
 <header style="position: relative; max-width: 1440px; width: 100%; margin: 0 auto; box-sizing: border-box; padding: 26px clamp(20px, 5vw, 72px) 22px; border-bottom: 1px solid rgba(255,255,255,0.35); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 56px; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase">
-<nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px 48px; flex: 1 1 300px">
-<a href="#massages" style="color: #FFFFFF; text-decoration: none">Les massages</a>
-<a href="#christelle" style="color: #FFFFFF; text-decoration: none">Christelle</a>
+<nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 10px 44px; flex: 1 1 300px">
+<a href="#accueil" style="color: #FFFFFF; text-decoration: none">Accueil</a>
+<a href="a-propos.html" style="color: #FFFFFF; text-decoration: none">À propos</a>
+<div class="menu-dd">
+<a href="#massages" aria-haspopup="true" style="color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; gap: 8px">Les massages<svg width="10" height="7" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1.5 L 5 5.5 L 9 1.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+<div class="menu-dd-list">
+<div style="background: #FAF7EF; border-radius: 2px; padding: 8px 0; box-shadow: 0 12px 32px rgba(20,22,16,0.25)">
+<a href="massage-relaxant-intuitif.html" style="display: block; padding: 14px 24px; color: #2B2723; text-decoration: none; font-family: Fraunces, serif; font-size: 19px; letter-spacing: 0; text-transform: none; font-weight: 400; white-space: nowrap">Massage relaxant et intuitif</a>
+<a href="massage-prenatal-postnatal.html" style="display: block; padding: 14px 24px; color: #2B2723; text-decoration: none; font-family: Fraunces, serif; font-size: 19px; letter-spacing: 0; text-transform: none; font-weight: 400; white-space: nowrap">Massage prénatal et postnatal</a>
+<a href="soin-minceur.html" style="display: block; padding: 14px 24px; color: #2B2723; text-decoration: none; font-family: Fraunces, serif; font-size: 19px; letter-spacing: 0; text-transform: none; font-weight: 400; white-space: nowrap">Soin minceur</a>
+<a href="soin-liftant-japonais-visage.html" style="display: block; padding: 14px 24px; color: #2B2723; text-decoration: none; font-family: Fraunces, serif; font-size: 19px; letter-spacing: 0; text-transform: none; font-weight: 400; white-space: nowrap">Soin liftant japonais du visage</a>
+</div>
+</div>
+</div>
 </nav>
-<a href="#accueil" aria-label="L'ame agit ô corps – accueil" style="display: block; line-height: 0; flex: 0 0 auto"><img src="images/logo-lame-agit-o-corps.png" alt="L'ame agit ô corps – Massage intuitif et bien-être" style="height: 64px; width: auto; filter: brightness(0) invert(1)"></a>
-<nav aria-label="Navigation secondaire" style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px 48px; flex: 1 1 300px">
-<a href="#zone" style="color: #FFFFFF; text-decoration: none">Où je me déplace</a>
-<a href="#reserver" style="color: #FFFFFF; text-decoration: none">Réserver</a>
+<a href="#accueil" aria-label="L'ame agit ô corps – accueil" style="display: block; line-height: 0; flex: 0 0 auto; background: #FAF7EF; padding: 12px 28px; border-radius: 60px; box-shadow: 0 8px 28px rgba(20,22,16,0.28)"><img src="images/logo-lame-agit-o-corps.png" alt="L'ame agit ô corps – Massage intuitif et bien-être" style="height: 62px; width: auto"></a>
+<nav aria-label="Navigation secondaire" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 10px 44px; flex: 1 1 300px">
+<a href="blog.html" style="color: #FFFFFF; text-decoration: none">Blog</a>
+<a href="#reserver" style="color: #FFFFFF; text-decoration: none; border: 1px solid rgba(255,255,255,0.8); padding: 11px 20px; border-radius: 2px">Réserver</a>
 </nav>
 </header>
 <div style="position: relative; flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px clamp(20px, 5vw, 72px) 96px">
@@ -117,46 +132,30 @@ a{color:#893041}a:hover{color:#6E2433}
 </div>
 </section>
 
-<!-- LA CARTE DES MASSAGES -->
+<!-- LES MASSAGES -->
 <section id="massages" style="background: #E8DCC8; border-top: 1px solid #D9CAB0; border-bottom: 1px solid #D9CAB0">
 <div style="max-width: 980px; margin: 0 auto; padding: clamp(80px, 10vw, 130px) clamp(20px, 5vw, 72px)">
-<p style="margin: 0; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #465B27">La carte</p>
+<p style="margin: 0; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #465B27">Les massages</p>
 <h2 style="margin: 14px 0 0; text-align: center; font-family: Fraunces, serif; font-weight: 350; font-size: clamp(36px, 4vw, 56px); line-height: 1.1">Mes massages <em style="color: #893041">à domicile</em></h2>
 <p style="margin: 18px auto 0; max-width: 560px; text-align: center; color: #4A443D">[Texte d'introduction de Jeff]</p>
-<div style="margin-top: 64px; display: flex; flex-direction: column">
-
-<a href="#massages" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="flex: 1 1 360px; min-width: 0"><span style="display: block; font-family: Fraunces, serif; font-size: 28px; line-height: 1.2">Massage intuitif</span><span style="display: block; margin-top: 4px; font-size: 16px; color: #5C554D">Guidé par ce que ressent ton corps, pour relâcher les tensions.</span></span>
-<span style="font-size: 16px; color: #465B27; font-weight: 600; white-space: nowrap">1 h · 85 €&#160;&#160;/&#160;&#160;1 h 30 · 115 €</span>
+<nav aria-label="Les massages" style="margin-top: 64px; display: flex; flex-direction: column">
+<a href="massage-relaxant-intuitif.html" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
+<span style="font-family: Fraunces, serif; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.2">Massage relaxant et intuitif</span>
+<span style="font-size: 16px; font-weight: 600; color: #893041; white-space: nowrap">Découvrir →</span>
 </a>
-
-<a href="#massages" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="flex: 1 1 360px; min-width: 0"><span style="display: block; font-family: Fraunces, serif; font-size: 28px; line-height: 1.2">Massage pré et postnatal</span><span style="display: block; margin-top: 4px; font-size: 16px; color: #5C554D">Doux et enveloppant, adapté à chaque étape de la grossesse.</span></span>
-<span style="font-size: 16px; color: #465B27; font-weight: 600; white-space: nowrap">1 h · 85 €&#160;&#160;/&#160;&#160;1 h 30 · 115 €</span>
+<a href="massage-prenatal-postnatal.html" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
+<span style="font-family: Fraunces, serif; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.2">Massage prénatal et postnatal</span>
+<span style="font-size: 16px; font-weight: 600; color: #893041; white-space: nowrap">Découvrir →</span>
 </a>
-
-<a href="#massages" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="flex: 1 1 360px; min-width: 0"><span style="display: block; font-family: Fraunces, serif; font-size: 28px; line-height: 1.2">Massage minceur et drainant</span><span style="display: block; margin-top: 4px; font-size: 16px; color: #5C554D">Dynamique, il stimule la circulation pour une sensation de légèreté.</span></span>
-<span style="font-size: 16px; color: #465B27; font-weight: 600; white-space: nowrap">1 h · 85 €&#160;&#160;/&#160;&#160;1 h 30 · 115 €</span>
+<a href="soin-minceur.html" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
+<span style="font-family: Fraunces, serif; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.2">Soin minceur</span>
+<span style="font-size: 16px; font-weight: 600; color: #893041; white-space: nowrap">Découvrir →</span>
 </a>
-
-<a href="#massages" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="flex: 1 1 360px; min-width: 0"><span style="display: block; font-family: Fraunces, serif; font-size: 28px; line-height: 1.2">Soin liftant japonais du visage</span><span style="display: block; margin-top: 4px; font-size: 16px; color: #5C554D">Un massage tonifiant du visage qui réveille la peau.</span></span>
-<span style="font-size: 16px; color: #465B27; font-weight: 600; white-space: nowrap">1 h · 85 €&#160;&#160;/&#160;&#160;1 h 30 · 125 €</span>
+<a href="soin-liftant-japonais-visage.html" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; border-bottom: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
+<span style="font-family: Fraunces, serif; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.2">Soin liftant japonais du visage</span>
+<span style="font-size: 16px; font-weight: 600; color: #893041; white-space: nowrap">Découvrir →</span>
 </a>
-
-<a href="#massages" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="flex: 1 1 360px; min-width: 0"><span style="display: block; font-family: Fraunces, serif; font-size: 28px; line-height: 1.2">Soin visage et corps</span><span style="display: block; margin-top: 4px; font-size: 16px; color: #5C554D">Le visage et le corps, dans une même séance.</span></span>
-<span style="font-size: 16px; color: #465B27; font-weight: 600; white-space: nowrap">2 h · 170 €</span>
-</a>
-
-<a href="#massages" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; padding: 28px 0; border-top: 1px solid #CDBB9C; border-bottom: 1px solid #CDBB9C; color: #2B2723; text-decoration: none">
-<span style="flex: 1 1 360px; min-width: 0"><span style="display: block; font-family: Fraunces, serif; font-size: 28px; line-height: 1.2">Accompagnement en plusieurs séances</span><span style="display: block; margin-top: 4px; font-size: 16px; color: #5C554D">Un suivi sur plusieurs rendez-vous, construit avec toi.</span></span>
-<span style="font-size: 16px; color: #465B27; font-weight: 600; white-space: nowrap">à partir de 290 €</span>
-</a>
-
-</div>
-<p style="margin: 30px 0 0; text-align: center; font-family: Caveat, cursive; font-size: 26px; color: #893041">Déplacement compris, matériel fourni&#8239;: tu n'as rien à prévoir.</p>
+</nav>
 </div>
 </section>
 
@@ -230,10 +229,13 @@ a{color:#893041}a:hover{color:#6E2433}
 <p style="margin: 18px 0 0; max-width: 340px">Massages à domicile à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos.</p>
 </div>
 <nav aria-label="Pied de page" style="flex: 0 1 auto; display: flex; flex-direction: column; gap: 8px">
-<a href="#massages" style="color: #2B2723; text-decoration: none">Les massages</a>
-<a href="#christelle" style="color: #2B2723; text-decoration: none">Christelle</a>
-<a href="#zone" style="color: #2B2723; text-decoration: none">Où je me déplace</a>
-<a href="#reserver" style="color: #2B2723; text-decoration: none">Réserver</a>
+<a href="#accueil" style="color: #2B2723; text-decoration: none">Accueil</a>
+<a href="a-propos.html" style="color: #2B2723; text-decoration: none">À propos</a>
+<a href="massage-relaxant-intuitif.html" style="color: #2B2723; text-decoration: none">Massage relaxant et intuitif</a>
+<a href="massage-prenatal-postnatal.html" style="color: #2B2723; text-decoration: none">Massage prénatal et postnatal</a>
+<a href="soin-minceur.html" style="color: #2B2723; text-decoration: none">Soin minceur</a>
+<a href="soin-liftant-japonais-visage.html" style="color: #2B2723; text-decoration: none">Soin liftant japonais du visage</a>
+<a href="blog.html" style="color: #2B2723; text-decoration: none">Blog</a>
 </nav>
 <div style="flex: 0 1 auto; display: flex; flex-direction: column; gap: 8px">
 <a href="tel:+33777258593" style="color: #465B27; font-weight: 600; text-decoration: none">07 77 25 85 93</a>
