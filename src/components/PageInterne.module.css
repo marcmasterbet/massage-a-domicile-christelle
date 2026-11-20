@@ -31,3 +31,7 @@
     font-size: 36px;
   }
 }
+
+.sauge {
+  background: var(--sauge);
+}

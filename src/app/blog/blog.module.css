@@ -14,8 +14,8 @@
   flex-direction: column;
   gap: 14px;
   padding: 32px 32px 64px;
-  background: #fff;
-  border: 1px solid var(--sable);
+  background: var(--rose);
+  border: 1px solid #e2c8c0;
   border-radius: 6px;
   color: var(--encre);
   text-decoration: none;
@@ -24,8 +24,8 @@
 
 .card:hover {
   color: var(--encre);
-  border-color: var(--terracotta);
-  box-shadow: 0 14px 34px rgba(43, 39, 35, 0.08);
+  border-color: var(--framboise);
+  box-shadow: 0 14px 34px rgba(43, 39, 35, 0.1);
   transform: translateY(-2px);
 }
 

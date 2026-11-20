@@ -5,12 +5,14 @@ type Props = {
   titre: string;
   /** Contenu de la page. Tant que Jeff n'a pas fourni ses textes, un emplacement est affiché. */
   children?: React.ReactNode;
+  /** Couleur de fond de toute la page (par défaut ivoire) */
+  fond?: "sauge";
 };
 
 /** Gabarit des pages internes : en-tête clair sans photo, grand titre, puis le contenu. */
-export function PageInterne({ titre, children }: Props) {
+export function PageInterne({ titre, children, fond }: Props) {
   return (
-    <>
+    <div className={fond ? styles[fond] : undefined}>
       <div className={styles.intro}>
         <h1 className={styles.title}>{titre}</h1>
       </div>
@@ -21,6 +23,6 @@ export function PageInterne({ titre, children }: Props) {
           photo={{ alt: titre }}
         />
       )}
-    </>
+    </div>
   );
 }

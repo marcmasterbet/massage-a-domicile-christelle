@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   return (
-    <PageInterne titre="Blog">
+    <PageInterne titre="Blog" fond="sauge">
       <div className={styles.list}>
         {ARTICLES.map((a) => (
           <Link key={a.slug} href={`/blog/${a.slug}/`} className={styles.card}>
