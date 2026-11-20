@@ -30,7 +30,7 @@ export const parties: PartieAccueil[] = [
       "Mais à quand remonte la dernière fois où tu l'as vraiment fait ?",
     ],
     cta: { label: "Je prends soin de moi" },
-    photo: { alt: "Mains de Christelle sur des épaules" },
+    photo: { alt: "Femme qui se masse l'épaule, tendue devant son ordinateur", src: "/images/dos-tendu.jpg" },
     fond: "ivoire",
   },
   {
@@ -42,7 +42,7 @@ export const parties: PartieAccueil[] = [
       "Juste une heure pendant laquelle tu n'as de comptes à rendre à personne.",
     ],
     cta: { label: "Je m'offre une pause" },
-    photo: { alt: "Moment de détente" },
+    photo: { alt: "Femme fatiguée qui masse sa nuque dans son canapé en fin de journée", src: "/images/journee-terminee.jpg" },
     fond: "sauge",
   },
   {
@@ -71,7 +71,7 @@ export const parties: PartieAccueil[] = [
       "Et le plus agréable dans tout ça ? Une fois ton massage terminé, tu es déjà chez toi.",
     ],
     cta: { label: "Je choisis mon créneau" },
-    photo: { alt: "Table de massage installée à domicile" },
+    photo: { alt: "Christelle et son vélo Fernand sur les quais de Bayonne", src: "/images/christelle-fernand.jpg" },
     fond: "sable",
   },
 ];
