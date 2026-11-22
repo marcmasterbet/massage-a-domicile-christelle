@@ -5,7 +5,8 @@ export type QuestionReponse = { question: string; reponse: string };
 export type Service = {
   slug: string;
   titre: string;
-  texte: string;
+  /** Paragraphes ; *texte entre astérisques* = italique */
+  paragraphes: string[];
   cta: string;
   photo?: string;
   faq?: QuestionReponse[];
@@ -15,8 +16,11 @@ export const SERVICES: Service[] = [
   {
     slug: "massage-relaxant-intuitif",
     titre: "Massage relaxant et intuitif",
-    texte:
-      "Le dos tendu, les épaules crispées, le stress qui s'accumule ? Ce massage personnalisé s'adapte aux besoins de ton corps et à ton ressenti du moment. Je prends le temps de t'écouter pour t'offrir un massage qui favorise la détente musculaire, la relaxation et le lâcher-prise.",
+    paragraphes: [
+      "Le dos tendu, les épaules crispées, le stress qui s'accumule ? Et si tu t'accordais une parenthèse hors du temps ?",
+      "Ici, aucun protocole figé. J'écoute ton corps, ton ressenti et tes émotions pour t'offrir un massage 100 % personnalisé. Tantôt enveloppants, tantôt plus profonds, mes gestes s'adaptent à tes besoins et à tes envies du moment.",
+      "L'objectif ? Relâcher les tensions, déconnecter et retrouver tes sensations. Un moment rien que pour toi, pour prendre soin de ton corps… et un peu de ton âme.",
+    ],
     cta: "Je libère mes tensions",
     photo: "/images/service-relaxant.jpg",
     faq: [
@@ -40,8 +44,11 @@ export const SERVICES: Service[] = [
   {
     slug: "massage-prenatal-postnatal",
     titre: "Massage prénatal et postnatal",
-    texte:
-      "Avant comme après l'accouchement, ton corps mérite une attention particulière. Spécialement formée aux massages pré et postnataux, je t'accompagne dans cette période de changements avec des gestes adaptés, pour favoriser la détente, apaiser les tensions corporelles et t'accorder un moment de douceur.",
+    paragraphes: [
+      "Avant comme après l’arrivée de bébé, ton corps traverse de nombreux changements. Et toi, au milieu de tout ça, quand prends-tu le temps de souffler ?",
+      "Certifiée en massage prénatal et postnatal, je t’accompagne à domicile avec des gestes adaptés à tes besoins, pour favoriser la détente, apaiser les tensions musculaires et dorsales et retrouver un sommeil plus serein.",
+      "Pendant la grossesse, c’est aussi un moment privilégié pour te reconnecter à toi-même et à ton bébé. Après l’accouchement, une parenthèse de douceur rien que pour toi.",
+    ],
     cta: "Je prends soin de moi",
     photo: "/images/service-prenatal.jpg",
     faq: [
@@ -65,8 +72,11 @@ export const SERVICES: Service[] = [
   {
     slug: "soin-minceur",
     titre: "Soin minceur",
-    texte:
-      "Tu souhaites prendre soin de ta silhouette et te sentir mieux dans ton corps ? Le soin minceur s'inscrit dans une démarche personnalisée de bien-être corporel. À l'unité ou sous forme de cure, je t'accompagne à ton rythme, pour prendre soin de ton corps et apprendre à l'aimer, sans pression ni jugement.",
+    paragraphes: [
+      "Tu aimerais redessiner ta silhouette, mais surtout te sentir mieux dans ton corps et retrouver confiance en toi ?",
+      "Je te propose un soin minceur à domicile, personnalisé selon tes besoins et tes attentes, à l'unité ou sous forme de cure. Je prends le temps de t'écouter pour t'accompagner à ton rythme, dans une démarche de bien-être corporel.",
+      "Mon objectif ? T'aider à te retrouver, à prendre soin de ta silhouette et à aimer ton corps, sans pression ni jugement.",
+    ],
     cta: "Je prends soin de ma silhouette",
     photo: "/images/service-minceur.jpg",
     faq: [
@@ -90,8 +100,12 @@ export const SERVICES: Service[] = [
   {
     slug: "soin-liftant-japonais-visage",
     titre: "Soin liftant japonais du visage",
-    texte:
-      "Inspiré des techniques traditionnelles japonaises, ce massage du visage associe des gestes précis, doux et rythmés. Son objectif ? Détendre les traits, favoriser l'éclat naturel de la peau et procurer une sensation de relaxation. Je te propose ce soin à l'unité ou sous forme de cure.",
+    paragraphes: [
+      "Ton visage porte les marques de la fatigue et du stress ? Et si tu lui accordais enfin toute l'attention qu'il mérite ?",
+      "Inspiré des traditions japonaises, ce soin associe massage manuel, digitopression et ventouses adaptées au visage. Des gestes précis, doux et rythmés pour stimuler la microcirculation, détendre les traits, favoriser le drainage et raviver l'éclat naturel de ta peau.",
+      "Chaque soin est personnalisé selon tes besoins. Pour la séance d'1 h 30, je complète le rituel par un double nettoyage de peau et un gommage doux. Pense simplement à venir sans maquillage !",
+      "*À l'unité ou en cure de 3 ou 5 séances*, offre à ton visage une parenthèse de beauté et de détente.",
+    ],
     cta: "J'offre une pause à mon visage",
     photo: "/images/service-liftant-japonais.jpg",
     faq: [
@@ -113,3 +127,14 @@ export const SERVICES: Service[] = [
     ],
   },
 ];
+
+// Bloc « Durées et tarifs » en fin de page
+export const TARIFS = {
+  titre: "Durées et tarifs",
+  intro: "Quel que soit le soin choisi, les tarifs sont les mêmes :",
+  lignes: [
+    { duree: "1 h", prix: "85 €" },
+    { duree: "1 h 30", prix: "120 €" },
+    { duree: "2 h", prix: "155 €" },
+  ],
+};

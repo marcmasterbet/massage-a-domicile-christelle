@@ -3,6 +3,11 @@ import Link from "next/link";
 import { FlipCall } from "./FlipCall";
 import styles from "./Section.module.css";
 
+/** Affiche *texte entre astérisques* en italique */
+function enLigne(texte: string) {
+  return texte.split(/\*(.+?)\*/g).map((morceau, i) => (i % 2 === 1 ? <em key={i}>{morceau}</em> : morceau));
+}
+
 export type Paragraphe = string | { texte: string; style: "fort" | "citation" | "signature" };
 
 type Props = {
@@ -49,7 +54,7 @@ export function Section({
             const style = typeof p === "string" ? "" : styles[p.style];
             return (
               <p key={texte} className={`${styles.paragraph} ${style}`}>
-                {texte}
+                {enLigne(texte)}
               </p>
             );
           })}

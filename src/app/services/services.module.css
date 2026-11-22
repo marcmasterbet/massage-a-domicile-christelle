@@ -1,0 +1,77 @@
+/* Bloc « Durées et tarifs » : se fond dans le pied de page */
+.tarifs {
+  background: linear-gradient(180deg, var(--ivoire) 0%, var(--ivoire) calc(100% - 120px), var(--terracotta) 100%);
+}
+
+.tarifsInner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(36px, 4vw, 56px) var(--marge) clamp(72px, 8vw, 110px);
+  text-align: center;
+}
+
+.tarifsTitre {
+  margin: 0;
+  font-family: var(--font-titre), Georgia, serif;
+  font-weight: 350;
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.12;
+}
+
+.tarifsIntro {
+  margin: 12px 0 0;
+  font-family: var(--font-titre), Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--texte-doux);
+}
+
+.liste {
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ligne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 22px 12px;
+  background: var(--rose);
+  border: 1px solid #e2c8c0;
+  border-radius: 6px;
+}
+
+.duree {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+.prix {
+  font-family: var(--font-titre), Georgia, serif;
+  font-size: 34px;
+  line-height: 1.1;
+  color: var(--framboise);
+}
+
+@media (max-width: 600px) {
+  .liste {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+  .ligne {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 14px 20px;
+  }
+  .prix {
+    font-size: 26px;
+  }
+}

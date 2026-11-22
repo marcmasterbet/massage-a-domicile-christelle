@@ -31,7 +31,6 @@ export const parties: PartiePage[] = [
       alt: "Portrait de Christelle",
       src: "/images/christelle-a-propos.jpg",
       rond: true,
-      legende: ["Pour zéro euro, c’est cette photo.", "Pour mille euros et demi, tu choisis !"],
     },
     fond: "ivoire",
   },
