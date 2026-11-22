@@ -177,3 +177,16 @@
     flex-direction: column;
   }
 }
+
+.lienCookies {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: #4a3a33;
+  cursor: pointer;
+}
+
+.lienCookies:hover {
+  color: var(--framboise-fonce);
+}

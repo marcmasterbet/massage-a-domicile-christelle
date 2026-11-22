@@ -25,7 +25,7 @@ export default function Confidentialite() {
 
         <h2>Le site</h2>
         <p>
-          Ce site ne contient aucun formulaire : il ne collecte pas de données personnelles. Les réservations se font
+          Ce site ne contient aucun formulaire : il ne vous demande aucune donnée personnelle. Les réservations se font
           uniquement par téléphone.
         </p>
         <p>
@@ -33,8 +33,25 @@ export default function Confidentialite() {
           (adresse IP, navigateur) pour assurer la sécurité et le bon fonctionnement du site.
         </p>
 
-        <h2>Cookies</h2>
-        <p>Ce site n’utilise actuellement aucun cookie, ni publicitaire ni de mesure d’audience.</p>
+        <h2 id="cookies">Cookies et mesure d’audience</h2>
+        <p>
+          Ce site n’utilise aucun cookie publicitaire. Avec votre accord uniquement, il utilise Google Analytics
+          (Google Ireland Limited) pour mesurer sa fréquentation : nombre de visites, pages consultées, durée, type
+          d’appareil et ville approximative. Ces statistiques sont anonymes pour nous : elles ne permettent pas de
+          savoir qui vous êtes.
+        </p>
+        <p>
+          La mesure d’audience est gérée par Marc Bretzner, qui a conçu le site, pour le compte de {e.nom}. Les données
+          peuvent être transférées aux États-Unis, dans le cadre des garanties prévues par le Data Privacy Framework.
+        </p>
+        <p>Cookies déposés si vous acceptez :</p>
+        <ul>
+          <li>_ga et _ga_… : distinguer les visiteurs et les visites, conservés 13 mois au maximum.</li>
+        </ul>
+        <p>
+          Si vous refusez, aucun cookie de mesure n’est déposé et le site fonctionne de la même façon. Votre choix est
+          conservé 6 mois. Vous pouvez le modifier à tout moment avec le lien « Cookies » en bas de chaque page.
+        </p>
 
         <h2>Les données des clients</h2>
         <p>Pour organiser les rendez-vous et réaliser les soins en toute sécurité, {e.nom} peut noter :</p>

@@ -1,0 +1,76 @@
+.bandeau {
+  position: fixed;
+  left: 50%;
+  bottom: clamp(12px, 2.5vw, 24px);
+  transform: translateX(-50%);
+  z-index: 60;
+  width: min(760px, calc(100% - 24px));
+  display: flex;
+  align-items: center;
+  gap: 16px 24px;
+  padding: 18px 22px;
+  background: var(--ivoire);
+  color: var(--encre);
+  border: 1px solid rgba(43, 39, 35, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(43, 39, 35, 0.18);
+  animation: entree 0.4s ease both;
+}
+
+@keyframes entree {
+  from { opacity: 0; transform: translate(-50%, 12px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.texte {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--texte-doux);
+}
+
+.texte a {
+  color: var(--framboise);
+  text-underline-offset: 3px;
+}
+
+.boutons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Les deux boutons ont exactement le même poids visuel (recommandation CNIL). */
+.bouton {
+  min-width: 108px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  border: 1.5px solid var(--framboise);
+  background: var(--ivoire);
+  color: var(--framboise);
+  font: 600 14px/1 var(--font-texte), sans-serif;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.bouton:hover,
+.bouton:focus-visible {
+  background: var(--framboise);
+  color: var(--ivoire);
+}
+
+@media (max-width: 640px) {
+  .bandeau {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 18px;
+  }
+  .boutons .bouton {
+    flex: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bandeau { animation: none; }
+}

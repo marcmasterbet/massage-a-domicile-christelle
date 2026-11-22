@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { BackToTop } from "@/components/BackToTop";
+import { Cookies } from "@/components/Cookies";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import {
@@ -80,6 +81,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main>{children}</main>
         <Footer />
         <BackToTop />
+        <Cookies />
       </body>
     </html>
   );

@@ -8,6 +8,7 @@ import {
   PRATICIENNE,
   PRESTATIONS,
 } from "@/lib/site";
+import { GererCookies } from "./Cookies";
 import { FlipCall } from "./FlipCall";
 import styles from "./Footer.module.css";
 
@@ -65,6 +66,8 @@ export function Footer() {
           <Link href="/confidentialite/">Confidentialité</Link>
           <span aria-hidden="true"> · </span>
           <Link href="/conditions-generales-de-vente/">CGV</Link>
+          <span aria-hidden="true"> · </span>
+          <GererCookies className={styles.lienCookies} />
         </p>
       </div>
     </footer>
