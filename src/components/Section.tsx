@@ -24,6 +24,8 @@ type Props = {
   inverse?: boolean;
   /** Sur téléphone : photo au-dessus du texte */
   photoEnHaut?: boolean;
+  /** Titre toujours sur une seule ligne (taille ajustée à l'écran) */
+  titreUneLigne?: boolean;
   /** Contenu ajouté sous le texte (ex. FAQ) */
   children?: React.ReactNode;
 };
@@ -40,12 +42,13 @@ export function Section({
   suivant,
   inverse,
   photoEnHaut,
+  titreUneLigne,
   children,
 }: Props) {
   const style = suivant ? ({ "--suivant": `var(--${suivant})` } as React.CSSProperties) : undefined;
   return (
     <section id={id} className={`${styles.section} ${styles[fond]}`} style={style}>
-      <div className={`${styles.inner} ${inverse ? styles.inverse : ""} ${photoEnHaut ? styles.photoEnHaut : ""}`}>
+      <div className={`${styles.inner} ${inverse ? styles.inverse : ""} ${photoEnHaut ? styles.photoEnHaut : ""} ${titreUneLigne ? styles.titreUneLigne : ""}`}>
         <div className={styles.text}>
           {titre && (
             <h2 className={styles.title}>

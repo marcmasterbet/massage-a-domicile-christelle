@@ -48,6 +48,12 @@
   letter-spacing: -0.015em;
 }
 
+/* Titre sur une seule ligne (page Services) */
+.titreUneLigne .title {
+  white-space: nowrap;
+  font-size: min(clamp(32px, 3.6vw, 52px), 42px);
+}
+
 .title em {
   color: var(--framboise);
 }
@@ -220,6 +226,9 @@ a.cta:hover,
     flex-direction: row;
   }
   /* Photo au-dessus du texte (page Services) */
+  .titreUneLigne .title {
+    font-size: min(28px, calc((100vw - 64px) / 13.5));
+  }
   .photoEnHaut > .photo,
   .photoEnHaut > .figure {
     order: -1;

@@ -38,6 +38,7 @@ export default function Services() {
           suivant={i % 2 === 1 ? "ivoire" : "sauge"}
           inverse={i % 2 === 1}
           photoEnHaut
+          titreUneLigne
         >
           {p.faq && <Faq items={p.faq} />}
         </Section>
