@@ -165,3 +165,27 @@
     display: block;
   }
 }
+
+/* Téléphone : la liste ne montre que les titres ; un toucher ouvre l'article */
+@media (max-width: 600px) {
+  .list {
+    gap: 12px;
+  }
+  .card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 20px 20px 22px;
+  }
+  .cardTitle {
+    font-size: 21px;
+  }
+  .cardExcerpt {
+    display: none;
+  }
+  .cardMore {
+    position: static;
+    flex-shrink: 0;
+  }
+}
