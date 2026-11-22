@@ -27,17 +27,17 @@ export const SERVICES: Service[] = [
       {
         question: "Quelle est la différence entre un massage relaxant et un massage intuitif ?",
         reponse:
-          "Le massage relaxant favorise la détente et le relâchement des tensions corporelles. L’approche intuitive me permet de personnaliser mes gestes en fonction de ton ressenti et de tes besoins du moment. Aucun de mes massages n’est identique.",
+          "Le massage relaxant vise à favoriser la détente et le relâchement des tensions. Le massage intuitif va plus loin dans la personnalisation : aucun protocole figé, chaque geste s'adapte à ton corps, à tes émotions et à ton ressenti du moment.",
       },
       {
-        question: "Faut-il être stressé ou avoir des tensions pour profiter d’un massage relaxant ?",
+        question: "Un massage relaxant peut-il aider à évacuer le stress et les tensions musculaires ?",
         reponse:
-          "Non, heureusement ! Tu n’as pas besoin d’attendre que ton corps te rappelle à l’ordre pour prendre soin de toi. Le simple plaisir de te faire masser est une excellente raison de prendre rendez-vous.",
+          "Oui, un massage relaxant peut favoriser le relâchement musculaire et procurer une sensation d'apaisement. Les gestes doux ou plus profonds sont adaptés à tes besoins pour t'aider à déconnecter et à retrouver tes sensations.",
       },
       {
-        question: "Combien coûte un massage relaxant à domicile au Pays basque ?",
+        question: "Comment se déroule un massage relaxant et intuitif à domicile ?",
         reponse:
-          "Mon tarif pour un massage d’une heure à domicile est de 85 €. Je me déplace avec ma table de massage, mon linge et mes produits à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos.",
+          "Je viens chez toi avec ma table de massage, mon linge et mes produits. Nous prenons d'abord le temps d'échanger sur tes envies et tes éventuelles tensions. Ensuite, j'adapte chaque geste à ton confort pour t'offrir un massage entièrement personnalisé.",
       },
     ],
   },
