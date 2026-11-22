@@ -29,7 +29,7 @@ export const parties: PartiePage[] = [
     cta: { label: "Je découvre tes massages", href: "/services/" },
     photo: {
       alt: "Portrait de Christelle",
-      src: "/images/christelle-a-propos.jpg",
+      src: "/images/christelle-a-propos-bonnet.jpg",
       rond: true,
     },
     fond: "ivoire",
