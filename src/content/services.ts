@@ -53,19 +53,19 @@ export const SERVICES: Service[] = [
     photo: "/images/service-prenatal.jpg",
     faq: [
       {
-        question: "Quels sont les bienfaits d’un massage prénatal ?",
+        question: "Quels sont les bienfaits d'un massage prénatal pendant la grossesse ?",
         reponse:
-          "Le massage prénatal favorise la relaxation, aide à relâcher les tensions musculaires et dorsales et t’offre un moment privilégié de connexion avec ton bébé.",
+          "Le massage prénatal favorise la détente, aide à soulager les tensions musculaires et dorsales et peut améliorer la sensation de bien-être. C'est aussi un moment privilégié pour ralentir, prendre soin de toi et te reconnecter à ton corps pendant la grossesse.",
       },
       {
-        question: "Peut-on se faire masser à n’importe quel moment de la grossesse ?",
+        question: "À partir de quel mois de grossesse peut-on recevoir un massage prénatal ?",
         reponse:
-          "Cela dépend du déroulement de ta grossesse et de ton état de santé. Avant chaque rendez-vous, nous échangeons sur ta situation. En cas de grossesse à risque ou de doute, un avis médical préalable est nécessaire.",
+          "Il n'existe pas de règle universelle : cela dépend de ton état de santé et du déroulement de ta grossesse. Formée au massage prénatal, j'adapte les gestes et les positions à tes besoins. En cas de grossesse à risque ou de doute, demande l'avis de ton médecin ou de ta sage-femme avant de réserver.",
       },
       {
-        question: "Pourquoi s’offrir un massage postnatal après l’accouchement ?",
+        question: "Quand peut-on recevoir un massage postnatal après l'accouchement ?",
         reponse:
-          "Après avoir consacré tant d’énergie à ton bébé, il est important de prendre également soin de toi. Le massage postnatal favorise la détente, le relâchement des tensions et te permet de te reconnecter à ton corps.",
+          "Le moment idéal dépend de ta récupération, notamment après une césarienne ou un accouchement compliqué. Le massage postnatal t'offre une parenthèse de douceur pour te détendre et prendre soin de toi. En cas de doute, demande l'accord de ton professionnel de santé avant la séance.",
       },
     ],
   },
@@ -81,19 +81,19 @@ export const SERVICES: Service[] = [
     photo: "/images/service-minceur.jpg",
     faq: [
       {
-        question: "En quoi consiste un soin minceur ?",
+        question: "En quoi consiste un soin minceur à domicile ?",
         reponse:
-          "Le soin minceur est un soin du corps qui vise à améliorer l’apparence de ta silhouette. Mon approche repose également sur l’écoute, la bienveillance et l’envie de t’aider à te sentir mieux dans ton corps.",
+          "Le soin minceur est une prestation de bien-être corporel personnalisée selon tes besoins et tes attentes. Je prends le temps de t'écouter pour adapter chaque séance à ton confort et t'accompagner dans une démarche respectueuse de ton corps.",
       },
       {
-        question: "Est-ce qu’un soin minceur fait perdre du poids ?",
+        question: "Un soin minceur permet-il de perdre du poids ou des centimètres ?",
         reponse:
-          "Non, le soin minceur n’est pas une méthode de perte de poids. Il s’inscrit dans une démarche de bien-être et d’accompagnement esthétique de ta silhouette, sans promesse de résultats miracles.",
+          "Un soin minceur ne garantit ni perte de poids ni réduction des centimètres. Il s'inscrit dans une démarche de bien-être et de soin de la silhouette, sans promesses irréalistes. Mon objectif est de t'aider à prendre soin de ton corps, sans pression ni jugement.",
       },
       {
-        question: "Vaut-il mieux choisir un soin minceur à l’unité ou en cure ?",
+        question: "Vaut-il mieux choisir un soin minceur à l'unité ou sous forme de cure ?",
         reponse:
-          "Tout dépend de tes attentes et de tes objectifs. Tu peux commencer par un premier soin, puis nous définirons ensemble si un accompagnement régulier correspond davantage à tes besoins.",
+          "Une séance à l'unité permet de découvrir le soin et de voir s'il correspond à tes attentes. Une cure permet de programmer plusieurs séances pour intégrer régulièrement ce moment de bien-être à ton quotidien. Le choix dépend de tes envies et de ton rythme.",
       },
     ],
   },
