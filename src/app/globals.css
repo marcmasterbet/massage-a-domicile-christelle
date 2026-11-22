@@ -92,3 +92,24 @@ a:hover {
     transition: none !important;
   }
 }
+
+/* ——— Coupures de lignes soignées, sur tous les écrans ——— */
+/* Titres : lignes équilibrées, jamais un ou deux mots seuls sur une ligne */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* Partie en italique d'un titre : jamais coupée en deux, elle reste entière
+   sur la même ligne ou passe entière à la ligne suivante */
+:where(h1, h2, h3) em {
+  display: inline-block;
+}
+
+/* Paragraphes : pas de mot seul sur la dernière ligne */
+p,
+li,
+summary {
+  text-wrap: pretty;
+}
