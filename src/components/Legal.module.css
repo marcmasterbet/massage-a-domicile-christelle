@@ -19,3 +19,35 @@
 .legal p {
   margin: 10px 0 0;
 }
+
+.legal ul {
+  margin: 10px 0 0;
+  padding-left: 22px;
+}
+
+.legal li {
+  margin-top: 6px;
+}
+
+.legal a {
+  color: var(--framboise);
+}
+
+.maj {
+  font-size: 14px;
+  color: var(--texte-doux);
+  font-style: italic;
+}
+
+.encadre {
+  margin-top: 18px;
+  padding: 18px 22px;
+  border: 1px solid var(--sable);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 16px;
+}
+
+.encadre p:first-child {
+  margin-top: 0;
+}
