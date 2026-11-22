@@ -50,7 +50,9 @@ export default function Services() {
             {TARIFS.lignes.map((l) => (
               <li key={l.duree} className={styles.ligne}>
                 <span className={styles.duree}>{l.duree}</span>
-                <span className={styles.prix}>{l.prix}</span>
+                <span className={styles.prix}>
+                  {l.prix} <span className={styles.ttc}>TTC</span>
+                </span>
               </li>
             ))}
           </ul>
