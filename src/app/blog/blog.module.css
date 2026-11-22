@@ -1,3 +1,23 @@
+/* ——— Titre de la page : une seule ligne sur ordinateur, en gras ——— */
+.titrePage {
+  display: block;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  /* taille calculée pour que la phrase tienne sur la largeur de la page */
+  font-size: calc((min(100vw, var(--contenu-max)) - 2 * var(--marge)) / 44.5);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* Tablette et téléphone : la phrase se replie proprement, en lignes équilibrées */
+@media (max-width: 900px) {
+  .titrePage {
+    white-space: normal;
+    text-wrap: balance;
+    font-size: clamp(17px, calc((100vw - 2 * var(--marge)) * 3 / 53), 30px);
+  }
+}
+
 /* ——— Liste des articles ——— */
 .list {
   max-width: var(--contenu-max);

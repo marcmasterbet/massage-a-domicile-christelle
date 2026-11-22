@@ -12,7 +12,14 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   return (
-    <PageInterne titre="Blog" fond="sauge">
+    <PageInterne
+      fond="sauge"
+      titre={
+        <span className={styles.titrePage}>
+          Mes conseils pour mieux comprendre les massages, leurs bienfaits et choisir le soin qui te ressemble.
+        </span>
+      }
+    >
       <div className={styles.list}>
         {ARTICLES.map((a) => (
           <Link key={a.slug} href={`/blog/${a.slug}/`} className={styles.card}>
