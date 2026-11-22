@@ -18,6 +18,7 @@ const portrait = parties[0].photo;
 export default function APropos() {
   return (
     <PageInterne
+      large
       titre={titrePageLignes.map((ligne, i) => (
         <span key={ligne} className={styles.ligneTitre}>
           {i > 0 && " "}

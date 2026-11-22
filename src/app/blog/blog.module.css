@@ -1,16 +1,24 @@
-/* ——— Titre de la page : une seule ligne sur ordinateur, en gras ——— */
+/* ——— Titre de la page : 2 lignes sur ordinateur, en gras ——— */
 .titrePage {
   display: block;
   font-weight: 600;
   letter-spacing: -0.01em;
-  /* taille calculée pour que la phrase tienne sur la largeur de la page */
-  font-size: calc((min(100vw, var(--contenu-max)) - 2 * var(--marge)) / 44.5);
+  /* taille calculée pour que la plus longue des 2 lignes tienne sur la largeur de la page */
+  font-size: min(40px, calc((min(100vw, var(--contenu-max)) - 2 * var(--marge)) / 23.6));
   line-height: 1.2;
+}
+
+.ligneTitre {
+  display: block;
   white-space: nowrap;
 }
 
 /* Tablette et téléphone : la phrase se replie proprement, en lignes équilibrées */
 @media (max-width: 900px) {
+  .ligneTitre {
+    display: inline;
+    white-space: normal;
+  }
   .titrePage {
     white-space: normal;
     text-wrap: balance;
@@ -22,7 +30,7 @@
 .list {
   max-width: var(--contenu-max);
   margin: 0 auto;
-  padding: 20px var(--marge) clamp(48px, 6vw, 80px);
+  padding: clamp(32px, 4vw, 56px) var(--marge) clamp(48px, 6vw, 80px);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
@@ -32,8 +40,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 32px;
+  gap: 10px;
+  padding: 22px 26px 24px;
   background: var(--rose);
   border: 1px solid #e2c8c0;
   border-radius: 6px;
@@ -53,7 +61,7 @@
   margin: 0;
   font-family: var(--font-titre), Georgia, serif;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1.2;
 }
 
@@ -91,7 +99,7 @@
     padding: 24px 22px;
   }
   .cardTitle {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 

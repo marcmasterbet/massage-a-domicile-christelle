@@ -9,10 +9,12 @@ type Props = {
   fond?: "sauge";
   /** Titre lu par Google mais non affiché */
   titreMasque?: boolean;
+  /** Ordinateur : marges réduites (aligné sur un contenu plus large) */
+  large?: boolean;
 };
 
 /** Gabarit des pages internes : en-tête clair sans photo, grand titre, puis le contenu. */
-export function PageInterne({ titre, children, fond, titreMasque }: Props) {
+export function PageInterne({ titre, children, fond, titreMasque, large }: Props) {
   return (
     <div className={`${styles.page} ${fond ? styles[fond] : ""}`}>
       {titreMasque ? (
@@ -20,7 +22,7 @@ export function PageInterne({ titre, children, fond, titreMasque }: Props) {
           <h1 className="sr-only">{titre}</h1>
         </div>
       ) : (
-        <div className={styles.intro}>
+        <div className={`${styles.intro} ${large ? styles.large : ""}`}>
           <h1 className={styles.title}>{titre}</h1>
         </div>
       )}

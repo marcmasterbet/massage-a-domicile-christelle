@@ -54,7 +54,7 @@ export function Section({
   const style = suivant ? ({ "--suivant": `var(--${suivant})` } as React.CSSProperties) : undefined;
   return (
     <section id={id} className={`${styles.section} ${styles[fond]}`} style={style}>
-      <div className={`${styles.inner} ${inverse ? styles.inverse : ""} ${photoEnHaut ? styles.photoEnHaut : ""} ${titreUneLigne ? styles.titreUneLigne : ""}`}>
+      <div className={`${styles.inner} ${inverse ? styles.inverse : ""} ${photoEnHaut ? styles.photoEnHaut : ""} ${titreUneLigne ? styles.titreUneLigne : ""} ${ligne1 ? styles.large : ""}`}>
         <div className={styles.text}>
           {titre && (
             <h2

@@ -16,7 +16,8 @@ export default function Blog() {
       fond="sauge"
       titre={
         <span className={styles.titrePage}>
-          Mes conseils pour mieux comprendre les massages, leurs bienfaits et choisir le soin qui te ressemble.
+          <span className={styles.ligneTitre}>Mes conseils pour mieux comprendre les massages,</span>{" "}
+          <span className={styles.ligneTitre}>leurs bienfaits et choisir le soin qui te ressemble.</span>
         </span>
       }
     >

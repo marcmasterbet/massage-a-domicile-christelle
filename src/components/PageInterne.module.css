@@ -53,3 +53,12 @@
 .sauge {
   --couleur: var(--sauge);
 }
+
+/* Ordinateur : marges réduites, aligné sur le contenu élargi (À propos) */
+@media (min-width: 901px) {
+  .large {
+    max-width: 1440px;
+    padding-left: clamp(16px, 2.2vw, 32px);
+    padding-right: clamp(16px, 2.2vw, 32px);
+  }
+}
