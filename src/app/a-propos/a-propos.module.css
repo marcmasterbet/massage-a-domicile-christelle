@@ -192,3 +192,13 @@ a.cta:hover {
     line-height: 1.6;
   }
 }
+
+/* Ordinateur : grand titre de la page en gras, même taille que les titres de section */
+@media (min-width: 901px) {
+  .ligneTitre {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+}

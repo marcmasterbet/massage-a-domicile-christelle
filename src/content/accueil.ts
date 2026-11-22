@@ -28,7 +28,7 @@ export const parties: PartieAccueil[] = [
   {
     titre: "Ton dos tire, tes épaules se crispent…",
     titreAccent: "Et toi, tu continues.",
-    ligne1: "Ton dos tire, tes épaules se crispent…",
+    ligne1: "Ton dos tire,",
     largeurTitre: 16.7,
     paragraphes: [
       "Entre le travail, les obligations du quotidien et les imprévus, tu trouves toujours une bonne raison de reporter le moment que tu voulais t'accorder.",

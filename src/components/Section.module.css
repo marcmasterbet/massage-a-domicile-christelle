@@ -298,32 +298,30 @@ a.cta:hover,
   }
 }
 
-/* ——— Accueil, ordinateur seulement ———
-   Marges réduites et colonne de texte plus large pour que les titres, dans le style
-   de la page Services (gras 600, 40 px), tiennent sur 2 lignes à côté de l'image.
-   Les paragraphes gardent leur largeur de lecture habituelle. */
+/* ——— Ordinateur : titres de section identiques partout (gras, même taille que Services) ———
+   Les titres trop longs passent sur 3 lignes ; la mise en page et le texte restent comme avant. */
 @media (min-width: 901px) {
-  .large {
-    max-width: 1440px;
-    padding-left: clamp(16px, 2.2vw, 32px);
-    padding-right: clamp(16px, 2.2vw, 32px);
-    column-gap: 48px;
-  }
-  .large > .text {
-    flex: 1 1 560px;
-    max-width: none;
-  }
-  /* texte un peu plus grand sous les titres, largeur de lecture confortable */
-  .large > .text > .paragraph {
-    max-width: 700px;
-    font-size: 19px;
-    line-height: 1.6;
-  }
-  .large > .photo {
-    max-width: 400px;
-  }
-  .large .deuxLignes {
+  .title,
+  .deuxLignes,
+  .titreUneLigne .title {
     font-weight: 600;
-    font-size: min(40px, 100cqi / 21.2);
+    font-size: var(--titre-ordi);
+  }
+  /* Accueil : 3 lignes coupées aux endroits choisis (1re ligne / suite / italique) */
+  .deuxLignes .ligne {
+    white-space: nowrap;
+  }
+  .deuxLignes em {
+    display: block;
+  }
+}
+
+/* Téléphone : titres en gras, même taille que la page Services */
+@media (max-width: 600px) {
+  .title,
+  .deuxLignes,
+  .titreUneLigne .title {
+    font-weight: 600;
+    font-size: var(--titre-mobile);
   }
 }

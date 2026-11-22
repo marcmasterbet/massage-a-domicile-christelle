@@ -92,3 +92,16 @@ a:hover {
     transition: none !important;
   }
 }
+
+/* ——— Ordinateur : taille commune des titres de section (celle de la page Services) ——— */
+:root {
+  /* calée pour que « Pour moi, un massage bien-être » tienne sur une ligne dans la colonne de texte */
+  --titre-ordi: clamp(30px, 3.36vw, 38px);
+}
+
+/* ——— Téléphone : titres de section identiques partout (gras, même taille que la page Services) ——— */
+@media (max-width: 600px) {
+  :root {
+    --titre-mobile: calc((100vw - 2 * var(--marge)) / 16.5);
+  }
+}
