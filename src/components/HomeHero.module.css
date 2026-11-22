@@ -145,6 +145,7 @@
 /* Ordinateur et tablette : grand titre sur une seule ligne, aussi grand que la largeur le permet */
 @media (min-width: 601px) {
   .title {
+    width: 100%;
     max-width: none;
     container-type: inline-size;
   }
