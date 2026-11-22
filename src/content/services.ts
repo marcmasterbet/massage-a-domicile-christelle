@@ -110,19 +110,19 @@ export const SERVICES: Service[] = [
     photo: "/images/service-liftant-japonais.jpg",
     faq: [
       {
-        question: "En quoi consiste le soin liftant japonais du visage ?",
+        question: "Quels sont les bienfaits du massage liftant japonais du visage ?",
         reponse:
-          "Ce massage du visage s'appuie sur des gestes précis et rythmés qui favorisent la détente des traits, stimulent la microcirculation cutanée et ravivent l'éclat naturel de la peau.",
+          "Le massage liftant japonais aide à détendre les traits, à stimuler la microcirculation et à raviver l'éclat naturel de la peau. Grâce à l'association du massage manuel, de la digitopression et des ventouses faciales, il offre un véritable moment de relaxation et de bien-être.",
       },
       {
-        question: "Le soin liftant japonais du visage permet-il d'atténuer les rides ?",
+        question: "Comment se déroule un soin liftant japonais du visage à domicile ?",
         reponse:
-          "Ce soin peut donner au visage une apparence plus reposée et lumineuse. Il ne supprime pas les rides et ne remplace pas un traitement de médecine esthétique.",
+          "Je viens chez toi avec le matériel nécessaire. Le soin associe différentes techniques de massage adaptées à ton visage et à tes besoins. Pour la séance d'1 h 30, je réalise également un double nettoyage de peau et un gommage doux. Pense simplement à venir sans maquillage.",
       },
       {
-        question: "Vaut-il mieux réaliser un soin liftant japonais ponctuellement ou en cure ?",
+        question: "Faut-il choisir un massage liftant japonais à l'unité ou une cure de 3 ou 5 séances ?",
         reponse:
-          "Tu peux t'offrir ce soin ponctuellement pour profiter d'un moment de détente ou choisir un accompagnement régulier. Nous définissons ensemble la fréquence adaptée à tes attentes.",
+          "Une séance à l'unité permet de découvrir le soin et de profiter d'un moment de détente. Une cure de 3 ou 5 séances permet d'intégrer régulièrement ce rituel à ta routine de bien-être. Le choix dépend de tes envies et de tes attentes, sans résultat esthétique garanti.",
       },
     ],
   },
