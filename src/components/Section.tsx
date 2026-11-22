@@ -5,13 +5,10 @@ import styles from "./Section.module.css";
 
 /** Affiche *texte entre astérisques* en italique */
 function enLigne(texte: string) {
-  return texte
-    .split(/\*(.+?)\*/g)
-    .map((morceau, i) => (i % 2 === 1 ? <em key={i}>{morceau}</em> : morceau));
+  return texte.split(/\*(.+?)\*/g).map((morceau, i) => (i % 2 === 1 ? <em key={i}>{morceau}</em> : morceau));
 }
 
-export type Paragraphe =
-  string | { texte: string; style: "fort" | "citation" | "signature" };
+export type Paragraphe = string | { texte: string; style: "fort" | "citation" | "signature" };
 
 type Props = {
   id?: string;
@@ -54,46 +51,30 @@ export function Section({
   largeurTitre,
   children,
 }: Props) {
-  const style = suivant
-    ? ({ "--suivant": `var(--${suivant})` } as React.CSSProperties)
-    : undefined;
-  const titreH2 = titre ? (
-    <h2
-      className={`${styles.title} ${ligne1 ? styles.deuxLignes : ""}`}
-      style={
-        largeurTitre
-          ? ({ "--largeur": largeurTitre } as React.CSSProperties)
-          : undefined
-      }
-    >
-      {ligne1 && titre.startsWith(ligne1) ? (
-        <>
-          <span className={styles.ligne}>{ligne1}</span>{" "}
-          <span className={styles.ligne}>
-            {titre.slice(ligne1.length).trim()}{" "}
-            {titreAccent && <em>{titreAccent}</em>}
-          </span>
-        </>
-      ) : (
-        <>
-          {titre} {titreAccent && <em>{titreAccent}</em>}
-        </>
-      )}
-    </h2>
-  ) : null;
+  const style = suivant ? ({ "--suivant": `var(--${suivant})` } as React.CSSProperties) : undefined;
   return (
-    <section
-      id={id}
-      className={`${styles.section} ${styles[fond]}`}
-      style={style}
-    >
-      <div
-        className={`${styles.inner} ${inverse ? styles.inverse : ""} ${photoEnHaut ? styles.photoEnHaut : ""} ${titreUneLigne ? styles.titreUneLigne : ""}`}
-      >
-        {/* Titre coupé en 2 lignes (accueil) : sur toute la largeur, au-dessus de la photo et du texte */}
-        {titre && ligne1 && <div className={styles.titreBloc}>{titreH2}</div>}
+    <section id={id} className={`${styles.section} ${styles[fond]}`} style={style}>
+      <div className={`${styles.inner} ${inverse ? styles.inverse : ""} ${photoEnHaut ? styles.photoEnHaut : ""} ${titreUneLigne ? styles.titreUneLigne : ""}`}>
         <div className={styles.text}>
-          {titre && !ligne1 && titreH2}
+          {titre && (
+            <h2
+              className={`${styles.title} ${ligne1 ? styles.deuxLignes : ""}`}
+              style={largeurTitre ? ({ "--largeur": largeurTitre } as React.CSSProperties) : undefined}
+            >
+              {ligne1 && titre.startsWith(ligne1) ? (
+                <>
+                  <span className={styles.ligne}>{ligne1}</span>{" "}
+                  <span className={styles.ligne}>
+                    {titre.slice(ligne1.length).trim()} {titreAccent && <em>{titreAccent}</em>}
+                  </span>
+                </>
+              ) : (
+                <>
+                  {titre} {titreAccent && <em>{titreAccent}</em>}
+                </>
+              )}
+            </h2>
+          )}
           {paragraphes.map((p) => {
             const texte = typeof p === "string" ? p : p.texte;
             const style = typeof p === "string" ? "" : styles[p.style];
@@ -105,10 +86,7 @@ export function Section({
           })}
           {cta &&
             (cta.href ? (
-              <Link
-                href={cta.href}
-                className={`${styles.ctaWrap} ${styles.cta} ${styles.ctaRecto}`}
-              >
+              <Link href={cta.href} className={`${styles.ctaWrap} ${styles.cta} ${styles.ctaRecto}`}>
                 {cta.label}
               </Link>
             ) : (
@@ -127,9 +105,7 @@ export function Section({
         {photo.legende ? (
           <figure className={styles.figure}>
             <div className={`${styles.photo} ${photo.rond ? styles.rond : ""}`}>
-              {photo.src && (
-                <Image src={photo.src} alt={photo.alt} fill sizes="400px" />
-              )}
+              {photo.src && <Image src={photo.src} alt={photo.alt} fill sizes="400px" />}
             </div>
             <figcaption className={styles.legende}>
               {photo.legende.map((ligne) => (
@@ -138,22 +114,11 @@ export function Section({
             </figcaption>
           </figure>
         ) : (
-          <div
-            className={`${styles.photo} ${photo.rond ? styles.rond : ""} ${photo.src ? "" : styles.vide}`}
-          >
+          <div className={`${styles.photo} ${photo.rond ? styles.rond : ""} ${photo.src ? "" : styles.vide}`}>
             {photo.src ? (
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                sizes="(max-width: 900px) 100vw, 420px"
-              />
+              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 900px) 100vw, 420px" />
             ) : (
-              <div
-                className={styles.placeholder}
-                role="img"
-                aria-label={`Photo à venir : ${photo.alt}`}
-              />
+              <div className={styles.placeholder} role="img" aria-label={`Photo à venir : ${photo.alt}`} />
             )}
           </div>
         )}
