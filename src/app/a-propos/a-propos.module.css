@@ -63,7 +63,10 @@
   letter-spacing: -0.015em;
 }
 
+/* La partie en italique ne se coupe jamais après la virgule :
+   elle reste entière, sur la même ligne ou sur la ligne suivante. */
 .titre em {
+  display: inline-block;
   color: var(--framboise);
 }
 
