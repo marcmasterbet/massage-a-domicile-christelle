@@ -219,6 +219,11 @@ a.cta:hover,
   .inverse {
     flex-direction: row;
   }
+  /* Photo au-dessus du texte (page Services) */
+  .photoEnHaut > .photo,
+  .photoEnHaut > .figure {
+    order: -1;
+  }
   .photo {
     flex-basis: 100%;
     max-width: none;

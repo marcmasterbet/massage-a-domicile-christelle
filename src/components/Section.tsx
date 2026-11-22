@@ -22,6 +22,8 @@ type Props = {
   suivant?: "ivoire" | "sauge" | "sable" | "terracotta";
   /** Photo à gauche, texte à droite */
   inverse?: boolean;
+  /** Sur téléphone : photo au-dessus du texte */
+  photoEnHaut?: boolean;
   /** Contenu ajouté sous le texte (ex. FAQ) */
   children?: React.ReactNode;
 };
@@ -37,12 +39,13 @@ export function Section({
   fond = "ivoire",
   suivant,
   inverse,
+  photoEnHaut,
   children,
 }: Props) {
   const style = suivant ? ({ "--suivant": `var(--${suivant})` } as React.CSSProperties) : undefined;
   return (
     <section id={id} className={`${styles.section} ${styles[fond]}`} style={style}>
-      <div className={`${styles.inner} ${inverse ? styles.inverse : ""}`}>
+      <div className={`${styles.inner} ${inverse ? styles.inverse : ""} ${photoEnHaut ? styles.photoEnHaut : ""}`}>
         <div className={styles.text}>
           {titre && (
             <h2 className={styles.title}>
