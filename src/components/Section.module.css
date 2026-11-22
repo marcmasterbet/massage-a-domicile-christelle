@@ -49,9 +49,15 @@
 }
 
 /* Titre sur une seule ligne (page Services) */
+.titreUneLigne .text {
+  container-type: inline-size;
+}
+
 .titreUneLigne .title {
   white-space: nowrap;
-  font-size: min(clamp(32px, 3.6vw, 52px), 42px);
+  font-weight: 600;
+  /* Le plus long titre remplit la colonne de texte, sans dépasser 42 px */
+  font-size: min(42px, 100cqi / 14);
 }
 
 .title em {
@@ -226,9 +232,6 @@ a.cta:hover,
     flex-direction: row;
   }
   /* Photo au-dessus du texte (page Services) */
-  .titreUneLigne .title {
-    font-size: min(28px, calc((100vw - 64px) / 13.5));
-  }
   .photoEnHaut > .photo,
   .photoEnHaut > .figure {
     order: -1;
@@ -263,5 +266,12 @@ a.cta:hover,
   .ctaWrap {
     display: block;
     text-align: center;
+  }
+}
+
+/* Téléphone : titres des services aussi grands que possible, sur une ligne */
+@media (max-width: 600px) {
+  .titreUneLigne .title {
+    font-size: calc(100cqi / 14);
   }
 }
