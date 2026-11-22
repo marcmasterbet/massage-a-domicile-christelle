@@ -49,7 +49,7 @@ export const parties: PartiePage[] = [
       "Je réalise mes massages à domicile à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos.",
       "J'apporte ma table de massage, mon linge, mes produits et ma bonne humeur.",
     ],
-    cta: { label: "Je t'invite chez moi" },
+    cta: { label: "Je viens à ta rencontre" },
     photo: { alt: "Christelle et Fernand" },
     fond: "ivoire",
   },
