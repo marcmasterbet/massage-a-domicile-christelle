@@ -60,7 +60,9 @@
   font-size: min(42px, 100cqi / 14);
 }
 
+/* La partie en italique du titre reste entière (jamais un « je » seul en fin de ligne) */
 .title em {
+  display: inline-block;
   color: var(--framboise);
 }
 
