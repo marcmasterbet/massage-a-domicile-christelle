@@ -17,10 +17,7 @@ export default function Blog() {
         {ARTICLES.map((a) => (
           <Link key={a.slug} href={`/blog/${a.slug}/`} className={styles.card}>
             <h2 className={styles.cardTitle}>{a.titre}</h2>
-            <p className={styles.cardExcerpt}>{a.blocs[0]?.paragraphes[0]}</p>
-            <span className={styles.cardMore} aria-hidden="true">
-              →
-            </span>
+            <span className={styles.cardMore}>Lire la suite</span>
           </Link>
         ))}
       </div>

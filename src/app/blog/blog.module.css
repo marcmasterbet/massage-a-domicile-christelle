@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 32px 32px 64px;
+  padding: 32px;
   background: var(--rose);
   border: 1px solid #e2c8c0;
   border-radius: 6px;
@@ -37,23 +37,42 @@
   line-height: 1.2;
 }
 
-.cardExcerpt {
-  margin: 0;
-  font-size: 16px;
-  color: var(--texte-doux);
+.cardMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--framboise);
 }
 
-.cardMore {
-  position: absolute;
-  left: 32px;
-  bottom: 24px;
-  font-size: 20px;
-  color: var(--framboise);
+/* Petite flèche qui avance au survol, comme les autres boutons du site */
+.cardMore::after {
+  content: "";
+  width: 18px;
+  height: 10px;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 10'%3E%3Cpath d='M0 5h16M12 1l4 4-4 4' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 10'%3E%3Cpath d='M0 5h16M12 1l4 4-4 4' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
   transition: transform 0.25s ease;
 }
 
-.card:hover .cardMore {
+.card:hover .cardMore::after {
   transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .list {
+    gap: 14px;
+  }
+  .card {
+    padding: 24px 22px;
+  }
+  .cardTitle {
+    font-size: 22px;
+  }
 }
 
 /* ——— Article ——— */
@@ -163,29 +182,5 @@
   }
   .ctaWrap {
     display: block;
-  }
-}
-
-/* Téléphone : la liste ne montre que les titres ; un toucher ouvre l'article */
-@media (max-width: 600px) {
-  .list {
-    gap: 12px;
-  }
-  .card {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 20px 20px 20px 22px;
-  }
-  .cardTitle {
-    font-size: 21px;
-  }
-  .cardExcerpt {
-    display: none;
-  }
-  .cardMore {
-    position: static;
-    flex-shrink: 0;
   }
 }
