@@ -5,7 +5,7 @@ export type QuestionReponse = { question: string; reponse: string };
 export type Service = {
   slug: string;
   titre: string;
-  /** Paragraphes ; *texte entre astérisques* = italique */
+  /** Paragraphes ; *texte entre astérisques* = italique */
   paragraphes: string[];
   cta: string;
   photo?: string;
@@ -18,7 +18,7 @@ export const SERVICES: Service[] = [
     titre: "Massage relaxant et intuitif",
     paragraphes: [
       "Le dos tendu, les épaules crispées, le stress qui s'accumule ? Et si tu t'accordais une parenthèse hors du temps ?",
-      "Ici, aucun protocole figé. J'écoute ton corps, ton ressenti et tes émotions pour t'offrir un massage 100 % personnalisé. Tantôt enveloppants, tantôt plus profonds, mes gestes s'adaptent à tes besoins et à tes envies du moment.",
+      "Ici, aucun protocole figé. J'écoute ton corps, ton ressenti et tes émotions pour t'offrir un massage 100 % personnalisé. Tantôt enveloppants, tantôt plus profonds, mes gestes s'adaptent à tes besoins et à tes envies du moment.",
       "L'objectif ? Relâcher les tensions, déconnecter et retrouver tes sensations. Un moment rien que pour toi, pour prendre soin de ton corps… et un peu de ton âme.",
     ],
     cta: "Je libère mes tensions",
@@ -37,7 +37,7 @@ export const SERVICES: Service[] = [
       {
         question: "Combien coûte un massage relaxant à domicile au Pays basque ?",
         reponse:
-          "Mon tarif pour un massage d’une heure à domicile est de 85 €. Je me déplace avec ma table de massage, mon linge et mes produits à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos.",
+          "Mon tarif pour un massage d’une heure à domicile est de 85 €. Je me déplace avec ma table de massage, mon linge et mes produits à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos.",
       },
     ],
   },
@@ -103,7 +103,7 @@ export const SERVICES: Service[] = [
     paragraphes: [
       "Ton visage porte les marques de la fatigue et du stress ? Et si tu lui accordais enfin toute l'attention qu'il mérite ?",
       "Inspiré des traditions japonaises, ce soin associe massage manuel, digitopression et ventouses adaptées au visage. Des gestes précis, doux et rythmés pour stimuler la microcirculation, détendre les traits, favoriser le drainage et raviver l'éclat naturel de ta peau.",
-      "Chaque soin est personnalisé selon tes besoins. Pour la séance d'1 h 30, je complète le rituel par un double nettoyage de peau et un gommage doux. Pense simplement à venir sans maquillage !",
+      "Chaque soin est personnalisé selon tes besoins. Pour la séance d'1 h 30, je complète le rituel par un double nettoyage de peau et un gommage doux. Pense simplement à venir sans maquillage !",
       "*À l'unité ou en cure de 3 ou 5 séances*, offre à ton visage une parenthèse de beauté et de détente.",
     ],
     cta: "J'offre une pause à mon visage",
@@ -128,13 +128,13 @@ export const SERVICES: Service[] = [
   },
 ];
 
-// Bloc « Durées et tarifs » en fin de page
+// Bloc « Durées et tarifs » en fin de page
 export const TARIFS = {
   titre: "Durées et tarifs",
   intro: "Quel que soit le soin choisi, les tarifs sont les mêmes :",
   lignes: [
-    { duree: "1 h", prix: "85 €" },
-    { duree: "1 h 30", prix: "120 €" },
-    { duree: "2 h", prix: "155 €" },
+    { duree: "1 h", prix: "85 €" },
+    { duree: "1 h 30", prix: "120 €" },
+    { duree: "2 h", prix: "155 €" },
   ],
 };

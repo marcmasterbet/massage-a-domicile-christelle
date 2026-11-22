@@ -100,7 +100,7 @@
 /* Téléphone : haut de page compact */
 @media (max-width: 600px) {
   .surtitre {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.12em;
     margin-bottom: 8px;
   }

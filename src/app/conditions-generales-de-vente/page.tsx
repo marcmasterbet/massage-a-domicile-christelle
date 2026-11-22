@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 };
 
 const TARIFS = [
-  { soin: "Massage relaxant et intuitif", prix: "1 h : 85 € · 1 h 30 : 120 € · 2 h : 155 €" },
-  { soin: "Massage prénatal et postnatal", prix: "1 h : 85 € · 1 h 30 : 120 € · 2 h : 155 €" },
-  { soin: "Soin minceur", prix: "1 h : 85 € · 1 h 30 : 120 € · 2 h : 155 €" },
-  { soin: "Soin liftant japonais du visage", prix: "1 h : 85 € · 1 h 30 : 120 €" },
-  { soin: "Soin visage et corps", prix: "2 h : 155 €" },
+  { soin: "Massage relaxant et intuitif", prix: "1 h : 85 € · 1 h 30 : 120 € · 2 h : 155 €" },
+  { soin: "Massage prénatal et postnatal", prix: "1 h : 85 € · 1 h 30 : 120 € · 2 h : 155 €" },
+  { soin: "Soin minceur", prix: "1 h : 85 € · 1 h 30 : 120 € · 2 h : 155 €" },
+  { soin: "Soin liftant japonais du visage", prix: "1 h : 85 € · 1 h 30 : 120 €" },
+  { soin: "Soin visage et corps", prix: "2 h : 155 €" },
   { soin: "Cures et forfaits", prix: "sur devis" },
 ];
 
@@ -36,7 +36,7 @@ export default function ConditionsGeneralesDeVente() {
         <h2>2. Prestataire</h2>
         <p>
           {e.nom} – {e.enseigne}, {e.statut.toLowerCase()}, SIRET {e.siret}, {e.adresse}. Téléphone :{" "}
-          {PHONE_DISPLAY}. E-mail : <a href={`mailto:${e.email}`}>{e.email}</a>.
+          {PHONE_DISPLAY}. E-mail : <a href={`mailto:${e.email}`}>{e.email}</a>.
         </p>
 
         <h2>3. Nature des prestations</h2>
@@ -68,17 +68,17 @@ export default function ConditionsGeneralesDeVente() {
           ))}
         </ul>
         <p>Les prix sont indiqués en euros, toutes taxes comprises. {e.tva}.</p>
-        <p>Suppléments :</p>
+        <p>Suppléments :</p>
         <ul>
-          <li>séance entre 7 h et 9 h ou entre 18 h et 22 h : 10 € ;</li>
-          <li>séance un dimanche ou un jour férié : 15 €, qui s’ajoutent au supplément horaire le cas échéant.</li>
+          <li>séance entre 7 h et 9 h ou entre 18 h et 22 h : 10 € ;</li>
+          <li>séance un dimanche ou un jour férié : 15 €, qui s’ajoutent au supplément horaire le cas échéant.</li>
         </ul>
         <p>Le prix applicable est celui annoncé au client lors de la réservation.</p>
 
         <h2>6. Réservation, arrhes et paiement</h2>
         <p>La réservation se fait par téléphone, au {PHONE_DISPLAY}.</p>
         <p>
-          Le rendez-vous n’est confirmé qu’après le versement d’arrhes correspondant à 30 % du prix de la séance, par le
+          Le rendez-vous n’est confirmé qu’après le versement d’arrhes correspondant à 30 % du prix de la séance, par le
           lien de paiement transmis au client (Wero ou carte bancaire). Sans ce versement, le créneau n’est pas réservé.
         </p>
         <p>
@@ -89,12 +89,12 @@ export default function ConditionsGeneralesDeVente() {
         <h2>7. Annulation, report et retard</h2>
         <ul>
           <li>
-            Annulation plus de 24 heures avant le rendez-vous : la séance est reportée à une nouvelle date et les arrhes
+            Annulation plus de 24 heures avant le rendez-vous : la séance est reportée à une nouvelle date et les arrhes
             sont reportées sur ce nouveau rendez-vous.
           </li>
-          <li>Annulation moins de 24 heures avant le rendez-vous ou absence : les arrhes restent acquises.</li>
+          <li>Annulation moins de 24 heures avant le rendez-vous ou absence : les arrhes restent acquises.</li>
           <li>
-            Retard : une tolérance de 10 minutes est accordée. Au-delà, le rendez-vous est annulé et les arrhes restent
+            Retard : une tolérance de 10 minutes est accordée. Au-delà, le rendez-vous est annulé et les arrhes restent
             acquises.
           </li>
         </ul>
@@ -113,8 +113,8 @@ export default function ConditionsGeneralesDeVente() {
         </p>
         <p>
           Lorsque le client souhaite que la séance ait lieu avant la fin de ce délai, il le demande expressément par
-          écrit (SMS, WhatsApp ou e-mail), par exemple : « Je demande que la séance ait lieu avant la fin de mon délai
-          de rétractation. » Une fois la séance entièrement réalisée, le droit de rétractation ne peut plus être
+          écrit (SMS, WhatsApp ou e-mail), par exemple : « Je demande que la séance ait lieu avant la fin de mon délai
+          de rétractation. » Une fois la séance entièrement réalisée, le droit de rétractation ne peut plus être
           exercé pour cette séance. Si le client se rétracte après le début d’une cure commencée à sa demande, seules
           les séances déjà réalisées restent dues.
         </p>
@@ -125,12 +125,12 @@ export default function ConditionsGeneralesDeVente() {
           <p>
             À l’attention de {e.nom}, {e.enseigne}, {e.adresse}, {e.email} :
             <br />
-            Je vous notifie par la présente ma rétractation du contrat portant sur la prestation suivante : … <br />
-            Réservée le : … <br />
-            Nom du client : … <br />
-            Adresse du client : … <br />
-            Date : … <br />
-            Signature (en cas d’envoi papier) : …
+            Je vous notifie par la présente ma rétractation du contrat portant sur la prestation suivante : … <br />
+            Réservée le : … <br />
+            Nom du client : … <br />
+            Adresse du client : … <br />
+            Date : … <br />
+            Signature (en cas d’envoi papier) : …
           </p>
         </div>
 
@@ -151,27 +151,27 @@ export default function ConditionsGeneralesDeVente() {
           bon.
         </p>
         <p>
-          Passé cette date, le bon est perdu : il n’est ni remboursé, ni échangé, ni prolongé. L’acheteur bénéficie du
+          Passé cette date, le bon est perdu : il n’est ni remboursé, ni échangé, ni prolongé. L’acheteur bénéficie du
           droit de rétractation de 14 jours prévu à l’article 8.
         </p>
 
         <h2>11. Mineurs</h2>
         <ul>
-          <li>De 6 mois à 14 ans : la séance a lieu en présence d’un parent, après signature d’un document par celui-ci.</li>
-          <li>De 14 à 18 ans : une autorisation écrite d’un parent est nécessaire.</li>
+          <li>De 6 mois à 14 ans : la séance a lieu en présence d’un parent, après signature d’un document par celui-ci.</li>
+          <li>De 14 à 18 ans : une autorisation écrite d’un parent est nécessaire.</li>
         </ul>
 
         <h2>12. Santé et contre-indications</h2>
         <p>
-          Avant la séance, le client informe {e.nom} de son état de santé : grossesse, traitement, pathologie,
+          Avant la séance, le client informe {e.nom} de son état de santé : grossesse, traitement, pathologie,
           douleurs ou toute particularité utile. Certaines situations peuvent conduire à adapter, reporter ou refuser
-          un soin, notamment :
+          un soin, notamment :
         </p>
         <ul>
-          <li>grossesse de moins de 3 mois, pour les soins du corps ;</li>
-          <li>fièvre ;</li>
-          <li>troubles cardiaques ou de la circulation sanguine, selon le soin ;</li>
-          <li>maladie grave : un avis médical et une décharge signée sont demandés.</li>
+          <li>grossesse de moins de 3 mois, pour les soins du corps ;</li>
+          <li>fièvre ;</li>
+          <li>troubles cardiaques ou de la circulation sanguine, selon le soin ;</li>
+          <li>maladie grave : un avis médical et une décharge signée sont demandés.</li>
         </ul>
         <p>En cas de doute, le client demande l’avis de son médecin avant la séance.</p>
 

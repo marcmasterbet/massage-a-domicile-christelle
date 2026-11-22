@@ -3,13 +3,13 @@ export const SITE_URL = "https://massages-pays-basque.fr";
 export const BRAND = "L'ame agit ô corps";
 export const PRATICIENNE = "Christelle Georges";
 
-export const PHONE_DISPLAY = "07 77 25 85 93";
+export const PHONE_DISPLAY = "07 77 25 85 93";
 export const PHONE_TEL = "tel:+33777258593";
 
 export const INSTAGRAM_URL = "https://www.instagram.com/l.ame.agit.o.corps/";
 export const FACEBOOK_URL = "https://www.facebook.com/omdanges";
 
-export const HORAIRES = "Je prends soin de toi 7 jours sur 7, de 9 h à 22 h.";
+export const HORAIRES = "Je prends soin de toi du lundi au samedi, de 9 h à 18 h.";
 
 export const VILLES = ["Bayonne", "Anglet", "Biarritz", "Saint-Pierre-d’Irube", "Tarnos"];
 

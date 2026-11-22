@@ -62,9 +62,9 @@ const jsonLd = {
   founder: { "@type": "Person", name: PRATICIENNE },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     opens: "09:00",
-    closes: "22:00",
+    closes: "18:00",
   },
   areaServed: VILLES.map((v) => ({ "@type": "City", name: v })),
 };

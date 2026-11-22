@@ -6,7 +6,7 @@ export const hero = {
   titreAccent: "besoin de souffler ?",
   accroche: "Ne bouge pas, j'arrive avec ma table de massage.",
   texte:
-    "Je prends soin de toi à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos, avec des massages 100 % personnalisés.",
+    "Je prends soin de toi à Bayonne, Anglet, Biarritz, Saint-Pierre-d’Irube et Tarnos, avec des massages 100 % personnalisés.",
   cta: "Je réserve mon massage",
 };
 

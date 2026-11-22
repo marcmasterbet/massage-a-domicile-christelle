@@ -22,23 +22,23 @@ export default function MentionsLegales() {
           <br />
           {e.statut}
           <br />
-          SIRET : {e.siret} · Code APE : {e.ape}
+          SIRET : {e.siret} · Code APE : {e.ape}
           <br />
           Immatriculée au {e.registre}
           <br />
           {e.adresse}
           <br />
-          Téléphone : {PHONE_DISPLAY}
+          Téléphone : {PHONE_DISPLAY}
           <br />
-          E-mail : <a href={`mailto:${e.email}`}>{e.email}</a>
+          E-mail : <a href={`mailto:${e.email}`}>{e.email}</a>
         </p>
         <p>{e.tva}.</p>
-        <p>Directrice de la publication : {e.nom}</p>
+        <p>Directrice de la publication : {e.nom}</p>
 
         <h2>Assurance professionnelle</h2>
         <p>
           Responsabilité civile professionnelle souscrite auprès de {e.assurance.assureur}, contrat n°{" "}
-          {e.assurance.contrat}. Couverture : {e.assurance.zone}.
+          {e.assurance.contrat}. Couverture : {e.assurance.zone}.
         </p>
 
         <h2>Activité</h2>

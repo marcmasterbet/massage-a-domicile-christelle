@@ -19,13 +19,13 @@ export default function Confidentialite() {
 
         <h2>Responsable du traitement</h2>
         <p>
-          {e.nom} – {e.enseigne}, {e.adresse}. Contact : <a href={`mailto:${e.email}`}>{e.email}</a> ·{" "}
+          {e.nom} – {e.enseigne}, {e.adresse}. Contact : <a href={`mailto:${e.email}`}>{e.email}</a> ·{" "}
           {PHONE_DISPLAY}.
         </p>
 
         <h2>Le site</h2>
         <p>
-          Ce site ne contient aucun formulaire : il ne vous demande aucune donnée personnelle. Les réservations se font
+          Ce site ne contient aucun formulaire : il ne vous demande aucune donnée personnelle. Les réservations se font
           uniquement par téléphone.
         </p>
         <p>
@@ -36,29 +36,29 @@ export default function Confidentialite() {
         <h2 id="cookies">Cookies et mesure d’audience</h2>
         <p>
           Ce site n’utilise aucun cookie publicitaire. Avec votre accord uniquement, il utilise Google Analytics
-          (Google Ireland Limited) pour mesurer sa fréquentation : nombre de visites, pages consultées, durée, type
-          d’appareil et ville approximative. Ces statistiques sont anonymes pour nous : elles ne permettent pas de
+          (Google Ireland Limited) pour mesurer sa fréquentation : nombre de visites, pages consultées, durée, type
+          d’appareil et ville approximative. Ces statistiques sont anonymes pour nous : elles ne permettent pas de
           savoir qui vous êtes.
         </p>
         <p>
           La mesure d’audience est gérée par Marc Bretzner, qui a conçu le site, pour le compte de {e.nom}. Les données
           peuvent être transférées aux États-Unis, dans le cadre des garanties prévues par le Data Privacy Framework.
         </p>
-        <p>Cookies déposés si vous acceptez :</p>
+        <p>Cookies déposés si vous acceptez :</p>
         <ul>
-          <li>_ga et _ga_… : distinguer les visiteurs et les visites, conservés 13 mois au maximum.</li>
+          <li>_ga et _ga_… : distinguer les visiteurs et les visites, conservés 13 mois au maximum.</li>
         </ul>
         <p>
           Si vous refusez, aucun cookie de mesure n’est déposé et le site fonctionne de la même façon. Votre choix est
-          conservé 6 mois. Vous pouvez le modifier à tout moment avec le lien « Cookies » en bas de chaque page.
+          conservé 6 mois. Vous pouvez le modifier à tout moment avec le lien « Cookies » en bas de chaque page.
         </p>
 
         <h2>Les données des clients</h2>
-        <p>Pour organiser les rendez-vous et réaliser les soins en toute sécurité, {e.nom} peut noter :</p>
+        <p>Pour organiser les rendez-vous et réaliser les soins en toute sécurité, {e.nom} peut noter :</p>
         <ul>
-          <li>vos nom, prénom, téléphone et adresse (pour se déplacer chez vous) ;</li>
-          <li>votre date de naissance ;</li>
-          <li>l’historique de vos séances ;</li>
+          <li>vos nom, prénom, téléphone et adresse (pour se déplacer chez vous) ;</li>
+          <li>votre date de naissance ;</li>
+          <li>l’historique de vos séances ;</li>
           <li>
             les informations de santé utiles au soin (grossesse, douleurs, contre-indications), uniquement avec votre
             accord.
@@ -75,9 +75,9 @@ export default function Confidentialite() {
 
         <h2>Durée de conservation</h2>
         <ul>
-          <li>Fiche client et informations de santé : 3 ans après votre dernière séance ;</li>
-          <li>Documents signés (autorisations parentales, décharges, contrats de cure) : 5 ans ;</li>
-          <li>Notes de prestation et factures : 10 ans, conformément aux obligations comptables.</li>
+          <li>Fiche client et informations de santé : 3 ans après votre dernière séance ;</li>
+          <li>Documents signés (autorisations parentales, décharges, contrats de cure) : 5 ans ;</li>
+          <li>Notes de prestation et factures : 10 ans, conformément aux obligations comptables.</li>
         </ul>
 
         <h2>Vos droits</h2>

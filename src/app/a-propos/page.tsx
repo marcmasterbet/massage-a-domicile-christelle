@@ -9,7 +9,7 @@ import styles from "./a-propos.module.css";
 export const metadata: Metadata = {
   title: "À propos – Christelle, praticienne du massage à domicile",
   description:
-    "Christelle, praticienne du massage à domicile au Pays basque depuis 2020 : une approche intuitive, de l'écoute et aucun jugement.",
+    "Christelle, praticienne du massage à domicile au Pays basque depuis 2020 : une approche intuitive, de l'écoute et aucun jugement.",
   alternates: { canonical: "/a-propos/" },
 };
 

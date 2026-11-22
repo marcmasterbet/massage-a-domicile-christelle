@@ -68,11 +68,15 @@ export function Cookies() {
   useEffect(() => {
     const choix = lireChoix();
     if (choix === "accepte") chargerAnalytics();
-    else if (choix === null) setVisible(true);
+    // Le bandeau apparaît juste après le premier affichage de la page.
+    const image = choix === null ? requestAnimationFrame(() => setVisible(true)) : 0;
 
     const ouvrir = () => setVisible(true);
     window.addEventListener(EVENEMENT_OUVRIR, ouvrir);
-    return () => window.removeEventListener(EVENEMENT_OUVRIR, ouvrir);
+    return () => {
+      cancelAnimationFrame(image);
+      window.removeEventListener(EVENEMENT_OUVRIR, ouvrir);
+    };
   }, []);
 
   function choisir(choix: Choix) {

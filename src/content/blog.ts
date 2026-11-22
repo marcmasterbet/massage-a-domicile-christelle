@@ -1,5 +1,5 @@
 // Articles de blog de Jeff — à reproduire mot pour mot. Ne rien ajouter.
-// Pour ajouter un article : copier un bloc { ... } dans la liste ARTICLES.
+// Pour ajouter un article : copier un bloc { ... } dans la liste ARTICLES.
 
 export type BlocArticle = {
   /** Intertitre (h2). Absent pour l'introduction. */
