@@ -37,6 +37,7 @@
   flex: 1 1 460px;
   min-width: 0;
   max-width: 640px;
+  container-type: inline-size;
 }
 
 .title {
@@ -58,6 +59,17 @@
   font-weight: 600;
   /* Le plus long titre remplit la colonne de texte, sans dépasser 42 px */
   font-size: min(42px, 100cqi / 14);
+}
+
+/* Titre sur 2 lignes, coupé à un endroit choisi (accueil).
+   Taille = largeur de la colonne ÷ largeur de la plus longue ligne : chaque ligne tient d'un seul morceau. */
+.deuxLignes {
+  font-size: max(24px, min(clamp(32px, 3.6vw, 52px), 100cqi / var(--largeur, 20)));
+}
+
+.ligne {
+  display: block;
+  text-wrap: wrap;
 }
 
 /* La partie en italique du titre reste entière (jamais un « je » seul en fin de ligne) */
@@ -275,5 +287,13 @@ a.cta:hover,
 @media (max-width: 600px) {
   .titreUneLigne .title {
     font-size: calc(100cqi / 14);
+  }
+}
+
+/* Téléphone et tablette : même coupure ; si une ligne est trop longue pour l'écran,
+   elle se replie proprement plutôt que de devenir illisible */
+@media (max-width: 900px) {
+  .deuxLignes {
+    font-size: max(22px, min(28px, 100cqi / var(--largeur, 20)));
   }
 }

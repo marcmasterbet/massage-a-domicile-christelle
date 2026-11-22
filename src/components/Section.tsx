@@ -26,6 +26,10 @@ type Props = {
   photoEnHaut?: boolean;
   /** Titre toujours sur une seule ligne (taille ajustée à l'écran) */
   titreUneLigne?: boolean;
+  /** Titre sur 2 lignes : texte de la 1re ligne (début exact du titre) */
+  ligne1?: string;
+  /** Largeur de la plus longue ligne du titre, en « tailles de police » : fixe la taille du titre */
+  largeurTitre?: number;
   /** Contenu ajouté sous le texte (ex. FAQ) */
   children?: React.ReactNode;
 };
@@ -43,6 +47,8 @@ export function Section({
   inverse,
   photoEnHaut,
   titreUneLigne,
+  ligne1,
+  largeurTitre,
   children,
 }: Props) {
   const style = suivant ? ({ "--suivant": `var(--${suivant})` } as React.CSSProperties) : undefined;
@@ -51,8 +57,22 @@ export function Section({
       <div className={`${styles.inner} ${inverse ? styles.inverse : ""} ${photoEnHaut ? styles.photoEnHaut : ""} ${titreUneLigne ? styles.titreUneLigne : ""}`}>
         <div className={styles.text}>
           {titre && (
-            <h2 className={styles.title}>
-              {titre} {titreAccent && <em>{titreAccent}</em>}
+            <h2
+              className={`${styles.title} ${ligne1 ? styles.deuxLignes : ""}`}
+              style={largeurTitre ? ({ "--largeur": largeurTitre } as React.CSSProperties) : undefined}
+            >
+              {ligne1 && titre.startsWith(ligne1) ? (
+                <>
+                  <span className={styles.ligne}>{ligne1}</span>{" "}
+                  <span className={styles.ligne}>
+                    {titre.slice(ligne1.length).trim()} {titreAccent && <em>{titreAccent}</em>}
+                  </span>
+                </>
+              ) : (
+                <>
+                  {titre} {titreAccent && <em>{titreAccent}</em>}
+                </>
+              )}
             </h2>
           )}
           {paragraphes.map((p) => {

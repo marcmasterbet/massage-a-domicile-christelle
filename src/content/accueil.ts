@@ -14,6 +14,10 @@ export type PartieAccueil = {
   id?: string;
   titre: string;
   titreAccent: string;
+  /** Titre sur 2 lignes : texte de la 1re ligne (le début exact de « titre ») */
+  ligne1: string;
+  /** Largeur de la plus longue ligne du titre, en « tailles de police » (mesurée) : fixe la taille du titre */
+  largeurTitre: number;
   paragraphes: string[];
   cta: { label: string; href?: string };
   photo: { alt: string; src?: string };
@@ -22,8 +26,10 @@ export type PartieAccueil = {
 
 export const parties: PartieAccueil[] = [
   {
-    titre: "Ton dos tire, tes épaules se crispent…",
+    titre: "Ton dos tire, tes épaules se crispent…",
     titreAccent: "Et toi, tu continues.",
+    ligne1: "Ton dos tire, tes épaules se crispent…",
+    largeurTitre: 16.7,
     paragraphes: [
       "Entre le travail, les obligations du quotidien et les imprévus, tu trouves toujours une bonne raison de reporter le moment que tu voulais t'accorder.",
       "Tu aimerais soulager tes tensions, évacuer ton stress et prendre soin de toi.",
@@ -36,6 +42,8 @@ export const parties: PartieAccueil[] = [
   {
     titre: "Ta journée est terminée, mais dans ta tête,",
     titreAccent: "elle continue.",
+    ligne1: "Ta journée est terminée,",
+    largeurTitre: 13.6,
     paragraphes: [
       "Même lorsque tu t'installes dans ton canapé, tu penses déjà à ce que tu dois faire demain.",
       "Tu voudrais pouvoir déconnecter sans regarder l'heure, sans penser aux autres et sans culpabiliser de ne rien faire.",
@@ -49,6 +57,8 @@ export const parties: PartieAccueil[] = [
     id: "christelle",
     titre: "Pour moi, un massage bien-être commence par l'écoute,",
     titreAccent: "pas par le toucher.",
+    ligne1: "Pour moi, un massage bien-être",
+    largeurTitre: 18.6,
     paragraphes: [
       "Je suis Christelle, praticienne du bien-être. J'ai commencé à exercer en 2020.",
       "Je suis notamment certifiée en massage pré et postnatal et en soin liftant japonais du visage.",
@@ -64,6 +74,8 @@ export const parties: PartieAccueil[] = [
     id: "reserver",
     titre: "Ton massage à domicile : tu n'as rien à apporter,",
     titreAccent: "je m'occupe du matériel.",
+    ligne1: "Ton massage à domicile :",
+    largeurTitre: 20.4,
     paragraphes: [
       "Ma table de massage, mon linge, mes produits et surtout ma bonne humeur : j'apporte tout ce dont j'ai besoin.",
       "Tu m'as d'ailleurs peut-être déjà croisée à vélo dans les rues de Bayonne, Anglet ou Biarritz.",
