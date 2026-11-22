@@ -2,7 +2,7 @@ import { Section } from "./Section";
 import styles from "./PageInterne.module.css";
 
 type Props = {
-  titre: string;
+  titre: React.ReactNode;
   /** Contenu de la page. Tant que Jeff n'a pas fourni ses textes, un emplacement est affiché. */
   children?: React.ReactNode;
   /** Couleur de fond de toute la page (par défaut ivoire) */
@@ -28,7 +28,7 @@ export function PageInterne({ titre, children, fond, titreMasque }: Props) {
         <Section
           titre="[Titre de Jeff]"
           paragraphes={["[Textes de Jeff à venir]"]}
-          photo={{ alt: titre }}
+          photo={{ alt: typeof titre === "string" ? titre : "" }}
         />
       )}
     </div>

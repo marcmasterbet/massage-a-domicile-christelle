@@ -149,3 +149,22 @@ a.cta:hover {
     text-align: center;
   }
 }
+
+/* Ordinateur : grand titre de la page sur 2 lignes,
+   et dernier titre sur 2 lignes (la partie en italique seule sur la 2e) */
+@media (min-width: 901px) {
+  .ligneTitre {
+    display: block;
+    white-space: nowrap;
+  }
+  .texte {
+    container-type: inline-size;
+  }
+  .deuxLignes {
+    white-space: nowrap;
+    font-size: min(clamp(30px, 3.2vw, 44px), 100cqi / 14);
+  }
+  .deuxLignes em {
+    display: block;
+  }
+}

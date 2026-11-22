@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FlipCall } from "@/components/FlipCall";
 import { PageInterne } from "@/components/PageInterne";
-import { parties, titrePage } from "@/content/a-propos";
+import { parties, titrePageLignes } from "@/content/a-propos";
 import styles from "./a-propos.module.css";
 
 export const metadata: Metadata = {
@@ -17,7 +17,14 @@ const portrait = parties[0].photo;
 
 export default function APropos() {
   return (
-    <PageInterne titre={titrePage}>
+    <PageInterne
+      titre={titrePageLignes.map((ligne, i) => (
+        <span key={ligne} className={styles.ligneTitre}>
+          {i > 0 && " "}
+          {ligne}
+        </span>
+      ))}
+    >
       <div className={styles.page}>
         <figure className={styles.figure}>
           <div className={styles.portrait}>
@@ -36,7 +43,7 @@ export default function APropos() {
           {parties.map((partie, i) => (
             <section key={i} className={styles.partie}>
               {partie.titre && (
-                <h2 className={styles.titre}>
+                <h2 className={`${styles.titre} ${partie.titreDeuxLignes ? styles.deuxLignes : ""}`}>
                   {partie.titre} {partie.titreAccent && <em>{partie.titreAccent}</em>}
                 </h2>
               )}

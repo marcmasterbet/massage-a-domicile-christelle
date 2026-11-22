@@ -2,10 +2,14 @@
 import type { Paragraphe } from "@/components/Section";
 
 export const titrePage = "Christelle, praticienne du massage à domicile au Pays basque";
+/** Le même titre, découpé en 2 lignes sur ordinateur */
+export const titrePageLignes = ["Christelle, praticienne du massage", "à domicile au Pays basque"];
 
 export type PartiePage = {
   titre?: string;
   titreAccent?: string;
+  /** Sur ordinateur : titre sur 2 lignes, la partie en italique seule sur la 2e */
+  titreDeuxLignes?: boolean;
   paragraphes: Paragraphe[];
   cta: { label: string; href?: string };
   photo: { alt: string; src?: string; rond?: boolean; legende?: string[] };
@@ -65,6 +69,7 @@ export const parties: PartiePage[] = [
   {
     titre: "Avant de prendre soin de ton corps,",
     titreAccent: "prenons le temps de faire connaissance.",
+    titreDeuxLignes: true,
     paragraphes: [
       "Tu n'as pas besoin de savoir exactement de quel massage tu as envie.",
       "Appelle-moi, raconte-moi ce dont tu as besoin et nous en parlerons ensemble.",
