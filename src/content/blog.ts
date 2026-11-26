@@ -222,6 +222,40 @@ export const ARTICLES: Article[] = [
     ],
     cta: "Je trouve le massage qui me correspond",
   },
+  {
+    slug: "massage-domicile-soir-dimanche",
+    titre: "Massage à domicile le soir ou le dimanche : peut-on vraiment s'offrir une pause quand on manque de temps ?",
+    seoTitle: "Massage à domicile le soir ou le dimanche | Pays basque",
+    seoDescription:
+      "Massage à domicile le soir, tôt le matin ou le dimanche au Pays basque : découvrez les horaires et les possibilités de réservation.",
+    date: "2026-11-26",
+    blocs: [
+      {
+        paragraphes: [
+          "Entre le travail, les enfants, les rendez-vous et les obligations du quotidien, trouver une heure pour soi peut devenir compliqué.",
+          "Pourtant, prendre soin de toi ne devrait pas être réservé aux journées où tu n'as rien à faire.",
+        ],
+      },
+      {
+        titre: "Des horaires adaptés à ton quotidien",
+        paragraphes: [
+          "Je propose habituellement mes massages à domicile *du lundi au samedi, de 9 h à 18 h*.",
+          "Selon mes disponibilités, des créneaux sont également possibles tôt le matin, entre 7 h et 9 h, ou en soirée, entre 18 h et 22 h.",
+          "Un supplément de *10 €* est prévu pour ces horaires particuliers. Les dimanches et jours fériés sont également concernés par un supplément de 15 €.",
+        ],
+      },
+      {
+        titre: "Le confort de rester chez soi",
+        paragraphes: [
+          "Un massage à domicile évite d'ajouter un trajet à une journée déjà bien remplie.",
+          "Je viens avec le nécessaire, tu profites de ta séance, puis tu peux continuer ta soirée tranquillement.",
+          "Pas besoin de bouleverser ton organisation pour t'accorder un moment de détente.",
+          "*Tu as des horaires compliqués ?* Contacte-moi pour trouver ensemble un créneau adapté.",
+        ],
+      },
+    ],
+    cta: "Je réserve mon massage",
+  },
 ];
 
 export function getArticle(slug: string) {

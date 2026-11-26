@@ -62,7 +62,9 @@ export default async function ArticlePage({ params }: PageProps<"/blog/[slug]">)
           <section key={i} className={i === 0 ? styles.intro : undefined}>
             {bloc.titre && <h2>{bloc.titre}</h2>}
             {bloc.paragraphes.map((p) => (
-              <p key={p}>{p}</p>
+              <p key={p}>
+                {p.split(/\*(.+?)\*/g).map((morceau, i) => (i % 2 === 1 ? <em key={i}>{morceau}</em> : morceau))}
+              </p>
             ))}
           </section>
         ))}
